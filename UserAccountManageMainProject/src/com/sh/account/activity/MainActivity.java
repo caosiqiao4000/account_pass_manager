@@ -18,7 +18,7 @@ public class MainActivity extends BaseSlideMenuActivity {
 	public void onContentChanged() {
 		super.onContentChanged();
 		setSlideRole(R.layout.layout_slidemenu_with_view_pager);
-		setSlideRole(R.layout.layout_primary_menu);
+//		setSlideRole(R.layout.layout_primary_menu);
 		setSlideRole(R.layout.layout_secondary_menu);
 
 		ViewPager viewPager = (ViewPager) findViewById(R.id.viewPager);
