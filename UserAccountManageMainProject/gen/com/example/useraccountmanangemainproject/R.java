@@ -130,13 +130,16 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int content=0x7f040000;
         public static final int et_1=0x7f04000b;
         public static final int gridView1=0x7f040009;
+        public static final int iv_group_icon=0x7f04000e;
         public static final int left=0x7f040003;
         public static final int pager=0x7f040008;
+        public static final int pb_group=0x7f04000f;
         public static final int primaryMenu=0x7f040001;
         public static final int right=0x7f040004;
         public static final int secondaryMenu=0x7f040002;
         public static final int slideMenu=0x7f040005;
         public static final int textView1=0x7f040006;
+        public static final int tv_group_name=0x7f040010;
         public static final int viewPager=0x7f04000d;
     }
     public static final class layout {
@@ -147,6 +150,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int layout_primary_menu=0x7f030004;
         public static final int layout_secondary_menu=0x7f030005;
         public static final int layout_slidemenu_with_view_pager=0x7f030006;
+        public static final int v_item_by_gridview=0x7f030007;
     }
     public static final class string {
         public static final int app_name=0x7f050000;

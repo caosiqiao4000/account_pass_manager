@@ -48,13 +48,16 @@ int id button2 0x7f04000c
 int id content 0x7f040000
 int id et_1 0x7f04000b
 int id gridView1 0x7f040009
+int id iv_group_icon 0x7f04000e
 int id left 0x7f040003
 int id pager 0x7f040008
+int id pb_group 0x7f04000f
 int id primaryMenu 0x7f040001
 int id right 0x7f040004
 int id secondaryMenu 0x7f040002
 int id slideMenu 0x7f040005
 int id textView1 0x7f040006
+int id tv_group_name 0x7f040010
 int id viewPager 0x7f04000d
 int layout a_slidemenu 0x7f030000
 int layout a_start 0x7f030001
@@ -63,6 +66,7 @@ int layout layout_gridv 0x7f030003
 int layout layout_primary_menu 0x7f030004
 int layout layout_secondary_menu 0x7f030005
 int layout layout_slidemenu_with_view_pager 0x7f030006
+int layout v_item_by_gridview 0x7f030007
 int string app_name 0x7f050000
 int style AppBaseTheme 0x7f060000
 int style AppTheme 0x7f060001
