@@ -9,6 +9,42 @@ package com.example.useraccountmanangemainproject;
 
 public final class R {
     public static final class attr {
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int behindOffset=0x7f010003;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int behindScrollScale=0x7f010005;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int behindWidth=0x7f010004;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int fadeDegree=0x7f01000b;
         /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -16,37 +52,34 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int edgeSlide=0x7f010006;
-        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int edgeSlideWidth=0x7f010007;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static final int interpolator=0x7f010009;
+        public static final int fadeEnabled=0x7f01000a;
         /** <p>Must be one of the following constant values.</p>
 <table>
 <colgroup align="left" />
 <colgroup align="left" />
 <colgroup align="left" />
 <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>content</code></td><td>0</td><td></td></tr>
-<tr><td><code>primaryMenu</code></td><td>1</td><td></td></tr>
-<tr><td><code>secondaryMenu</code></td><td>2</td><td></td></tr>
+<tr><td><code>left</code></td><td>0</td><td></td></tr>
+<tr><td><code>right</code></td><td>1</td><td></td></tr>
 </table>
          */
-        public static final int layout_role=0x7f010001;
+        public static final int mode=0x7f010000;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int primaryShadowDrawable=0x7f010004;
+        public static final int selectorDrawable=0x7f01000d;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int selectorEnabled=0x7f01000c;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int shadowDrawable=0x7f010008;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -56,36 +89,37 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int primaryShadowWidth=0x7f010002;
-        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int secondaryShadowWidth=0x7f010003;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static final int sencondaryShadowDrawable=0x7f010005;
-        /** <p>Must be one or more (separated by '|') of the following constant values.</p>
+        public static final int shadowWidth=0x7f010009;
+        /** <p>Must be one of the following constant values.</p>
 <table>
 <colgroup align="left" />
 <colgroup align="left" />
 <colgroup align="left" />
 <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>left</code></td><td>1</td><td></td></tr>
-<tr><td><code>right</code></td><td>2</td><td></td></tr>
+<tr><td><code>margin</code></td><td>0</td><td></td></tr>
+<tr><td><code>fullscreen</code></td><td>1</td><td></td></tr>
 </table>
          */
-        public static final int slideDirection=0x7f010008;
+        public static final int touchModeAbove=0x7f010006;
+        /** <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>margin</code></td><td>0</td><td></td></tr>
+<tr><td><code>fullscreen</code></td><td>1</td><td></td></tr>
+</table>
+         */
+        public static final int touchModeBehind=0x7f010007;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int slideMenuStyle=0x7f010000;
+        public static final int viewAbove=0x7f010001;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int viewBehind=0x7f010002;
     }
     public static final class drawable {
         public static final int bottom_to_slide_left=0x7f020000;
@@ -94,66 +128,65 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int explore_bottom_detail_p=0x7f020003;
         public static final int explorer_bottom_detail_dis=0x7f020004;
         public static final int ic_launcher=0x7f020005;
-        public static final int umeng_socialize_douban_off=0x7f020006;
-        public static final int umeng_socialize_douban_on=0x7f020007;
-        public static final int umeng_socialize_facebook=0x7f020008;
-        public static final int umeng_socialize_facebook_off=0x7f020009;
-        public static final int umeng_socialize_gmail=0x7f02000a;
-        public static final int umeng_socialize_gmail_off=0x7f02000b;
-        public static final int umeng_socialize_google=0x7f02000c;
-        public static final int umeng_socialize_google_off=0x7f02000d;
-        public static final int umeng_socialize_qq_off=0x7f02000e;
-        public static final int umeng_socialize_qq_on=0x7f02000f;
-        public static final int umeng_socialize_qzone_off=0x7f020010;
-        public static final int umeng_socialize_qzone_on=0x7f020011;
-        public static final int umeng_socialize_renren_off=0x7f020012;
-        public static final int umeng_socialize_renren_on=0x7f020013;
-        public static final int umeng_socialize_sina_off=0x7f020014;
-        public static final int umeng_socialize_sina_on=0x7f020015;
-        public static final int umeng_socialize_sms=0x7f020016;
-        public static final int umeng_socialize_sms_off=0x7f020017;
-        public static final int umeng_socialize_twitter=0x7f020018;
-        public static final int umeng_socialize_twitter_off=0x7f020019;
-        public static final int umeng_socialize_tx_off=0x7f02001a;
-        public static final int umeng_socialize_tx_on=0x7f02001b;
-        public static final int umeng_socialize_wechat=0x7f02001c;
-        public static final int umeng_socialize_wechat_gray=0x7f02001d;
-        public static final int umeng_socialize_wxcircle=0x7f02001e;
-        public static final int umeng_socialize_wxcircle_gray=0x7f02001f;
-        public static final int wirite_editbox_focused=0x7f020020;
-        public static final int wirite_editbox_normal=0x7f020021;
+        public static final int shadow=0x7f020006;
+        public static final int umeng_socialize_douban_off=0x7f020007;
+        public static final int umeng_socialize_douban_on=0x7f020008;
+        public static final int umeng_socialize_facebook=0x7f020009;
+        public static final int umeng_socialize_facebook_off=0x7f02000a;
+        public static final int umeng_socialize_gmail=0x7f02000b;
+        public static final int umeng_socialize_gmail_off=0x7f02000c;
+        public static final int umeng_socialize_google=0x7f02000d;
+        public static final int umeng_socialize_google_off=0x7f02000e;
+        public static final int umeng_socialize_qq_off=0x7f02000f;
+        public static final int umeng_socialize_qq_on=0x7f020010;
+        public static final int umeng_socialize_qzone_off=0x7f020011;
+        public static final int umeng_socialize_qzone_on=0x7f020012;
+        public static final int umeng_socialize_renren_off=0x7f020013;
+        public static final int umeng_socialize_renren_on=0x7f020014;
+        public static final int umeng_socialize_sina_off=0x7f020015;
+        public static final int umeng_socialize_sina_on=0x7f020016;
+        public static final int umeng_socialize_sms=0x7f020017;
+        public static final int umeng_socialize_sms_off=0x7f020018;
+        public static final int umeng_socialize_twitter=0x7f020019;
+        public static final int umeng_socialize_twitter_off=0x7f02001a;
+        public static final int umeng_socialize_tx_off=0x7f02001b;
+        public static final int umeng_socialize_tx_on=0x7f02001c;
+        public static final int umeng_socialize_wechat=0x7f02001d;
+        public static final int umeng_socialize_wechat_gray=0x7f02001e;
+        public static final int umeng_socialize_wxcircle=0x7f02001f;
+        public static final int umeng_socialize_wxcircle_gray=0x7f020020;
+        public static final int wirite_editbox_focused=0x7f020021;
+        public static final int wirite_editbox_normal=0x7f020022;
     }
     public static final class id {
-        public static final int animation_layout_content=0x7f040007;
-        public static final int button1=0x7f04000a;
-        public static final int button2=0x7f04000c;
-        public static final int content=0x7f040000;
-        public static final int et_1=0x7f04000b;
-        public static final int gridView1=0x7f040009;
-        public static final int iv_group_icon=0x7f04000e;
-        public static final int left=0x7f040003;
-        public static final int pager=0x7f040008;
-        public static final int pb_group=0x7f04000f;
-        public static final int primaryMenu=0x7f040001;
-        public static final int right=0x7f040004;
-        public static final int secondaryMenu=0x7f040002;
-        public static final int slideMenu=0x7f040005;
-        public static final int textView1=0x7f040006;
-        public static final int tv_group_name=0x7f040010;
-        public static final int viewPager=0x7f04000d;
+        public static final int button1=0x7f05000a;
+        public static final int button2=0x7f05000c;
+        public static final int content=0x7f050006;
+        public static final int et_1=0x7f05000b;
+        public static final int fullscreen=0x7f050003;
+        public static final int gridView1=0x7f050009;
+        public static final int iv_group_icon=0x7f05000e;
+        public static final int left=0x7f050000;
+        public static final int margin=0x7f050002;
+        public static final int menu=0x7f050008;
+        public static final int pb_group=0x7f05000f;
+        public static final int right=0x7f050001;
+        public static final int selected_view=0x7f050004;
+        public static final int slidingmenumain=0x7f05000d;
+        public static final int textView1=0x7f050005;
+        public static final int tv_group_name=0x7f050010;
+        public static final int viewpager=0x7f050007;
     }
     public static final class layout {
-        public static final int a_slidemenu=0x7f030000;
-        public static final int a_start=0x7f030001;
-        public static final int a_swipe=0x7f030002;
+        public static final int a_start=0x7f030000;
+        public static final int frame_content=0x7f030001;
+        public static final int frame_menu=0x7f030002;
         public static final int layout_gridv=0x7f030003;
-        public static final int layout_primary_menu=0x7f030004;
-        public static final int layout_secondary_menu=0x7f030005;
-        public static final int layout_slidemenu_with_view_pager=0x7f030006;
-        public static final int v_item_by_gridview=0x7f030007;
+        public static final int slidingmenumain=0x7f030004;
+        public static final int v_item_by_gridview=0x7f030005;
     }
     public static final class string {
-        public static final int app_name=0x7f050000;
+        public static final int app_name=0x7f060000;
     }
     public static final class style {
         /** 
@@ -176,70 +209,125 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         res/values-v11/styles.xml on API 14+ devices.
     
  API 14 theme customizations can go here. 
-
-        Base application theme, dependent on API level. This theme is replaced
-        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
-    
-
-            Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
-        
-
-        Base application theme for API 11+. This theme completely replaces
-        AppBaseTheme from res/values/styles.xml on API 11+ devices.
-    
- API 11 theme customizations can go here. 
-
-        Base application theme for API 14+. This theme completely replaces
-        AppBaseTheme from BOTH res/values/styles.xml and
-        res/values-v11/styles.xml on API 14+ devices.
-    
- API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f060000;
+        public static final int AppBaseTheme=0x7f070000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
- Application theme. 
- All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f060001;
+        public static final int AppTheme=0x7f070001;
         /**  默认输入框 
          */
-        public static final int EditView_default=0x7f060002;
+        public static final int EditView_default=0x7f070002;
+    }
+    public static final class xml {
+        public static final int menu=0x7f040000;
     }
     public static final class styleable {
-        /** Attributes that can be used with a SlideMenu.
+        /** Attributes that can be used with a SlidingMenu.
            <p>Includes the following attributes:</p>
            <table>
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #SlideMenu_edgeSlide com.example.useraccountmanangemainproject:edgeSlide}</code></td><td></td></tr>
-           <tr><td><code>{@link #SlideMenu_edgeSlideWidth com.example.useraccountmanangemainproject:edgeSlideWidth}</code></td><td></td></tr>
-           <tr><td><code>{@link #SlideMenu_interpolator com.example.useraccountmanangemainproject:interpolator}</code></td><td></td></tr>
-           <tr><td><code>{@link #SlideMenu_primaryShadowDrawable com.example.useraccountmanangemainproject:primaryShadowDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #SlideMenu_primaryShadowWidth com.example.useraccountmanangemainproject:primaryShadowWidth}</code></td><td></td></tr>
-           <tr><td><code>{@link #SlideMenu_secondaryShadowWidth com.example.useraccountmanangemainproject:secondaryShadowWidth}</code></td><td></td></tr>
-           <tr><td><code>{@link #SlideMenu_sencondaryShadowDrawable com.example.useraccountmanangemainproject:sencondaryShadowDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #SlideMenu_slideDirection com.example.useraccountmanangemainproject:slideDirection}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingMenu_behindOffset com.example.useraccountmanangemainproject:behindOffset}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingMenu_behindScrollScale com.example.useraccountmanangemainproject:behindScrollScale}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingMenu_behindWidth com.example.useraccountmanangemainproject:behindWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingMenu_fadeDegree com.example.useraccountmanangemainproject:fadeDegree}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingMenu_fadeEnabled com.example.useraccountmanangemainproject:fadeEnabled}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingMenu_mode com.example.useraccountmanangemainproject:mode}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingMenu_selectorDrawable com.example.useraccountmanangemainproject:selectorDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingMenu_selectorEnabled com.example.useraccountmanangemainproject:selectorEnabled}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingMenu_shadowDrawable com.example.useraccountmanangemainproject:shadowDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingMenu_shadowWidth com.example.useraccountmanangemainproject:shadowWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingMenu_touchModeAbove com.example.useraccountmanangemainproject:touchModeAbove}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingMenu_touchModeBehind com.example.useraccountmanangemainproject:touchModeBehind}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingMenu_viewAbove com.example.useraccountmanangemainproject:viewAbove}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingMenu_viewBehind com.example.useraccountmanangemainproject:viewBehind}</code></td><td></td></tr>
            </table>
-           @see #SlideMenu_edgeSlide
-           @see #SlideMenu_edgeSlideWidth
-           @see #SlideMenu_interpolator
-           @see #SlideMenu_primaryShadowDrawable
-           @see #SlideMenu_primaryShadowWidth
-           @see #SlideMenu_secondaryShadowWidth
-           @see #SlideMenu_sencondaryShadowDrawable
-           @see #SlideMenu_slideDirection
+           @see #SlidingMenu_behindOffset
+           @see #SlidingMenu_behindScrollScale
+           @see #SlidingMenu_behindWidth
+           @see #SlidingMenu_fadeDegree
+           @see #SlidingMenu_fadeEnabled
+           @see #SlidingMenu_mode
+           @see #SlidingMenu_selectorDrawable
+           @see #SlidingMenu_selectorEnabled
+           @see #SlidingMenu_shadowDrawable
+           @see #SlidingMenu_shadowWidth
+           @see #SlidingMenu_touchModeAbove
+           @see #SlidingMenu_touchModeBehind
+           @see #SlidingMenu_viewAbove
+           @see #SlidingMenu_viewBehind
          */
-        public static final int[] SlideMenu = {
-            0x7f010002, 0x7f010003, 0x7f010004, 0x7f010005,
-            0x7f010006, 0x7f010007, 0x7f010008, 0x7f010009
+        public static final int[] SlidingMenu = {
+            0x7f010000, 0x7f010001, 0x7f010002, 0x7f010003,
+            0x7f010004, 0x7f010005, 0x7f010006, 0x7f010007,
+            0x7f010008, 0x7f010009, 0x7f01000a, 0x7f01000b,
+            0x7f01000c, 0x7f01000d
         };
         /**
-          <p>This symbol is the offset where the {@link com.example.useraccountmanangemainproject.R.attr#edgeSlide}
-          attribute's value can be found in the {@link #SlideMenu} array.
+          <p>This symbol is the offset where the {@link com.example.useraccountmanangemainproject.R.attr#behindOffset}
+          attribute's value can be found in the {@link #SlidingMenu} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.example.useraccountmanangemainproject:behindOffset
+        */
+        public static final int SlidingMenu_behindOffset = 3;
+        /**
+          <p>This symbol is the offset where the {@link com.example.useraccountmanangemainproject.R.attr#behindScrollScale}
+          attribute's value can be found in the {@link #SlidingMenu} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.example.useraccountmanangemainproject:behindScrollScale
+        */
+        public static final int SlidingMenu_behindScrollScale = 5;
+        /**
+          <p>This symbol is the offset where the {@link com.example.useraccountmanangemainproject.R.attr#behindWidth}
+          attribute's value can be found in the {@link #SlidingMenu} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.example.useraccountmanangemainproject:behindWidth
+        */
+        public static final int SlidingMenu_behindWidth = 4;
+        /**
+          <p>This symbol is the offset where the {@link com.example.useraccountmanangemainproject.R.attr#fadeDegree}
+          attribute's value can be found in the {@link #SlidingMenu} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.example.useraccountmanangemainproject:fadeDegree
+        */
+        public static final int SlidingMenu_fadeDegree = 11;
+        /**
+          <p>This symbol is the offset where the {@link com.example.useraccountmanangemainproject.R.attr#fadeEnabled}
+          attribute's value can be found in the {@link #SlidingMenu} array.
 
 
           <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
@@ -248,120 +336,12 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.useraccountmanangemainproject:edgeSlide
+          @attr name com.example.useraccountmanangemainproject:fadeEnabled
         */
-        public static final int SlideMenu_edgeSlide = 4;
+        public static final int SlidingMenu_fadeEnabled = 10;
         /**
-          <p>This symbol is the offset where the {@link com.example.useraccountmanangemainproject.R.attr#edgeSlideWidth}
-          attribute's value can be found in the {@link #SlideMenu} array.
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.example.useraccountmanangemainproject:edgeSlideWidth
-        */
-        public static final int SlideMenu_edgeSlideWidth = 5;
-        /**
-          <p>This symbol is the offset where the {@link com.example.useraccountmanangemainproject.R.attr#interpolator}
-          attribute's value can be found in the {@link #SlideMenu} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.useraccountmanangemainproject:interpolator
-        */
-        public static final int SlideMenu_interpolator = 7;
-        /**
-          <p>This symbol is the offset where the {@link com.example.useraccountmanangemainproject.R.attr#primaryShadowDrawable}
-          attribute's value can be found in the {@link #SlideMenu} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.useraccountmanangemainproject:primaryShadowDrawable
-        */
-        public static final int SlideMenu_primaryShadowDrawable = 2;
-        /**
-          <p>This symbol is the offset where the {@link com.example.useraccountmanangemainproject.R.attr#primaryShadowWidth}
-          attribute's value can be found in the {@link #SlideMenu} array.
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.example.useraccountmanangemainproject:primaryShadowWidth
-        */
-        public static final int SlideMenu_primaryShadowWidth = 0;
-        /**
-          <p>This symbol is the offset where the {@link com.example.useraccountmanangemainproject.R.attr#secondaryShadowWidth}
-          attribute's value can be found in the {@link #SlideMenu} array.
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.example.useraccountmanangemainproject:secondaryShadowWidth
-        */
-        public static final int SlideMenu_secondaryShadowWidth = 1;
-        /**
-          <p>This symbol is the offset where the {@link com.example.useraccountmanangemainproject.R.attr#sencondaryShadowDrawable}
-          attribute's value can be found in the {@link #SlideMenu} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.useraccountmanangemainproject:sencondaryShadowDrawable
-        */
-        public static final int SlideMenu_sencondaryShadowDrawable = 3;
-        /**
-          <p>This symbol is the offset where the {@link com.example.useraccountmanangemainproject.R.attr#slideDirection}
-          attribute's value can be found in the {@link #SlideMenu} array.
-
-
-          <p>Must be one or more (separated by '|') of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>left</code></td><td>1</td><td></td></tr>
-<tr><td><code>right</code></td><td>2</td><td></td></tr>
-</table>
-          @attr name com.example.useraccountmanangemainproject:slideDirection
-        */
-        public static final int SlideMenu_slideDirection = 6;
-        /** Attributes that can be used with a SlideMenu_Layout.
-           <p>Includes the following attributes:</p>
-           <table>
-           <colgroup align="left" />
-           <colgroup align="left" />
-           <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #SlideMenu_Layout_layout_role com.example.useraccountmanangemainproject:layout_role}</code></td><td></td></tr>
-           </table>
-           @see #SlideMenu_Layout_layout_role
-         */
-        public static final int[] SlideMenu_Layout = {
-            0x7f010001
-        };
-        /**
-          <p>This symbol is the offset where the {@link com.example.useraccountmanangemainproject.R.attr#layout_role}
-          attribute's value can be found in the {@link #SlideMenu_Layout} array.
+          <p>This symbol is the offset where the {@link com.example.useraccountmanangemainproject.R.attr#mode}
+          attribute's value can be found in the {@link #SlidingMenu} array.
 
 
           <p>Must be one of the following constant values.</p>
@@ -370,12 +350,115 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <colgroup align="left" />
 <colgroup align="left" />
 <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>content</code></td><td>0</td><td></td></tr>
-<tr><td><code>primaryMenu</code></td><td>1</td><td></td></tr>
-<tr><td><code>secondaryMenu</code></td><td>2</td><td></td></tr>
+<tr><td><code>left</code></td><td>0</td><td></td></tr>
+<tr><td><code>right</code></td><td>1</td><td></td></tr>
 </table>
-          @attr name com.example.useraccountmanangemainproject:layout_role
+          @attr name com.example.useraccountmanangemainproject:mode
         */
-        public static final int SlideMenu_Layout_layout_role = 0;
+        public static final int SlidingMenu_mode = 0;
+        /**
+          <p>This symbol is the offset where the {@link com.example.useraccountmanangemainproject.R.attr#selectorDrawable}
+          attribute's value can be found in the {@link #SlidingMenu} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.example.useraccountmanangemainproject:selectorDrawable
+        */
+        public static final int SlidingMenu_selectorDrawable = 13;
+        /**
+          <p>This symbol is the offset where the {@link com.example.useraccountmanangemainproject.R.attr#selectorEnabled}
+          attribute's value can be found in the {@link #SlidingMenu} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.example.useraccountmanangemainproject:selectorEnabled
+        */
+        public static final int SlidingMenu_selectorEnabled = 12;
+        /**
+          <p>This symbol is the offset where the {@link com.example.useraccountmanangemainproject.R.attr#shadowDrawable}
+          attribute's value can be found in the {@link #SlidingMenu} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.example.useraccountmanangemainproject:shadowDrawable
+        */
+        public static final int SlidingMenu_shadowDrawable = 8;
+        /**
+          <p>This symbol is the offset where the {@link com.example.useraccountmanangemainproject.R.attr#shadowWidth}
+          attribute's value can be found in the {@link #SlidingMenu} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.example.useraccountmanangemainproject:shadowWidth
+        */
+        public static final int SlidingMenu_shadowWidth = 9;
+        /**
+          <p>This symbol is the offset where the {@link com.example.useraccountmanangemainproject.R.attr#touchModeAbove}
+          attribute's value can be found in the {@link #SlidingMenu} array.
+
+
+          <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>margin</code></td><td>0</td><td></td></tr>
+<tr><td><code>fullscreen</code></td><td>1</td><td></td></tr>
+</table>
+          @attr name com.example.useraccountmanangemainproject:touchModeAbove
+        */
+        public static final int SlidingMenu_touchModeAbove = 6;
+        /**
+          <p>This symbol is the offset where the {@link com.example.useraccountmanangemainproject.R.attr#touchModeBehind}
+          attribute's value can be found in the {@link #SlidingMenu} array.
+
+
+          <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>margin</code></td><td>0</td><td></td></tr>
+<tr><td><code>fullscreen</code></td><td>1</td><td></td></tr>
+</table>
+          @attr name com.example.useraccountmanangemainproject:touchModeBehind
+        */
+        public static final int SlidingMenu_touchModeBehind = 7;
+        /**
+          <p>This symbol is the offset where the {@link com.example.useraccountmanangemainproject.R.attr#viewAbove}
+          attribute's value can be found in the {@link #SlidingMenu} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.example.useraccountmanangemainproject:viewAbove
+        */
+        public static final int SlidingMenu_viewAbove = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.example.useraccountmanangemainproject.R.attr#viewBehind}
+          attribute's value can be found in the {@link #SlidingMenu} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.example.useraccountmanangemainproject:viewBehind
+        */
+        public static final int SlidingMenu_viewBehind = 2;
     };
 }
