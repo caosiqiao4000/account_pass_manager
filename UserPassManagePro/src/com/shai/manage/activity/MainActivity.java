@@ -19,7 +19,7 @@ public class MainActivity extends SlidingActivity {
         setTitle("SlidingMenu Demo");
         setContentView(R.layout.frame_content);
         
-     // set the Behind View
+     // set the Behind View  菜单
         setBehindContentView(R.layout.frame_menu);
         FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
         MenuFragment menuFragment = new MenuFragment();
@@ -54,6 +54,7 @@ public class MainActivity extends SlidingActivity {
         getMenuInflater().inflate(R.menu.activity_main, menu);
         return true;
     }
+    
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
