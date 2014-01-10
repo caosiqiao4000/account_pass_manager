@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, GprsTestActivity!</string>
+    <string name="app_name">GprsTest</string>
+    <string name="gprs_opening">已开启</string>
+    <string name="gprs_close">已关闭</string>
+
+</resources>

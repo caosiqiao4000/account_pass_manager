@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="15dip" >
+
+    <Button
+        android:id="@+id/btnOpen"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tv_statu_name"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="40dp"
+        android:text="打开GPRS"
+        android:textSize="20dip"
+        android:visibility="visible" />
+
+    <EditText
+        android:id="@+id/et_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnShut"
+        android:layout_alignRight="@+id/btnShut"
+        android:layout_below="@+id/btnShut"
+        android:layout_marginTop="17dp"
+        android:ems="10"
+        android:hint="请输入打开GPPS所需要的密码"
+        android:inputType="textPassword" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/btnShut"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnOpen"
+        android:layout_below="@+id/btnOpen"
+        android:layout_marginTop="14dp"
+        android:text="关闭GPRS"
+        android:textSize="20dip"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tv_statu_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnOpen"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="18dp"
+        android:text="GPRS状态:"
+        android:textSize="20dip" />
+
+    <EditText
+        android:id="@+id/et_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/et_one"
+        android:layout_alignRight="@+id/et_one"
+        android:layout_below="@+id/et_one"
+        android:layout_marginTop="18dp"
+        android:ems="10"
+        android:hint="请再次输入"
+        android:inputType="textPassword"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/et_two"
+        android:layout_alignRight="@+id/et_two"
+        android:layout_below="@+id/et_two"
+        android:layout_marginTop="29dp"
+        android:text="确  认"
+        android:textSize="20dip"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_statu_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_statu_name"
+        android:layout_alignBottom="@+id/tv_statu_name"
+        android:layout_alignRight="@+id/btnShut"
+        android:text="@string/gprs_opening"
+        android:textSize="20dip" />
+
+</RelativeLayout>
