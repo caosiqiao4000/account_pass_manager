@@ -5,6 +5,7 @@ import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+
 import com.example.userpassmanagepro.R;
 import com.shai.manage.fragment.ContentFragment;
 import com.shai.manage.fragment.MenuFragment;
@@ -24,7 +25,8 @@ public class MainActivity extends SlidingActivity {
         FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
         MenuFragment menuFragment = new MenuFragment();
         fragmentTransaction.replace(R.id.menu, menuFragment);
-        fragmentTransaction.replace(R.id.content, new ContentFragment(getString(R.string.welcome)),"Welcome");
+        fragmentTransaction.replace(R.id.content, new ContentFragment(getString(R.string.welcome),PassSetting.main_content_frist_flag),"Welcome");
+        
         fragmentTransaction.commit();
 
         initSlidingMenu();

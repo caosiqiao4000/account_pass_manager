@@ -2,6 +2,7 @@ package com.shai.manage.adapter;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import android.annotation.SuppressLint;
 import android.app.Fragment;
 import android.app.FragmentManager;
@@ -9,6 +10,8 @@ import android.app.FragmentTransaction;
 import android.support.v4.view.PagerAdapter;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.shai.manage.activity.PassSetting;
 import com.shai.manage.fragment.ContentFragment;
 
 @SuppressLint("NewApi")
@@ -22,9 +25,9 @@ public class DemoFragmentAdapter extends PagerAdapter {
     public DemoFragmentAdapter(FragmentManager fm) {
         mFragmentManager = fm;
 
-        mFragmentList.add(new ContentFragment("ViewPager#Frist"));
-        mFragmentList.add(new ContentFragment("ViewPager#Second"));
-        mFragmentList.add(new ContentFragment("ViewPager#Third"));
+        mFragmentList.add(new ContentFragment("ViewPager#Frist",PassSetting.main_content_frist_flag));
+        mFragmentList.add(new ContentFragment("ViewPager#Second",PassSetting.main_content_frist_flag));
+        mFragmentList.add(new ContentFragment("ViewPager#Third",PassSetting.main_content_frist_flag));
 
     }
     @Override

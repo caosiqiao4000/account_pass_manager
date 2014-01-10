@@ -2,6 +2,7 @@ package com.shai.manage.fragment;
 
 import android.annotation.SuppressLint;
 import android.app.Fragment;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.text.TextUtils;
@@ -24,21 +25,18 @@ import com.shai.manage.activity.PassSetting;
 @SuppressLint({ "NewApi", "ValidFragment" })
 public class ContentFragment extends Fragment {
 	// 标题栏标题
-	private String tv_title;
+	private String title;
 	// 创建哪一个内容view
 	private int caseViewKey;
-
-	public ContentFragment() {
-	}
-
-	public ContentFragment(String text) {
-		Log.e("Krislq", text);
-		this.tv_title = text;
-	}
+	
+	private GridView gridView;
+	private ViewPager vPager;
+	private TextView tv_title ;
+	private Context context;
 
 	public ContentFragment(String text, int caseViewKey) {
 		Log.e("Krislq", text);
-		this.tv_title = text;
+		this.title = text;
 		this.caseViewKey = caseViewKey;
 	}
 
@@ -57,13 +55,14 @@ public class ContentFragment extends Fragment {
 			Log.e("Krislq", "onCreateView:" + tv_title);
 			// inflater the layout
 			View view = inflater.inflate(R.layout.fragment_content_item, null);
-			TextView textView = (TextView) view.findViewById(R.id.tv_title);
-			if (!TextUtils.isEmpty(tv_title)) {
-				textView.setText(tv_title);
-			}
+//			if (!TextUtils.isEmpty(tv_title)) {
+//				textView.setText(tv_title);
+//			}
 
-			ViewPager vpPager = (ViewPager) view.findViewById(R.id.vp4_grid);
-			GridView gv = (GridView) view.findViewById(R.id.gridView1);
+			vPager = (ViewPager) view.findViewById(R.id.vp4_grid);
+			gridView = (GridView) view.findViewById(R.id.gridView1);
+			tv_title = (TextView) view.findViewById(R.id.tv_title);
+			
 
 			return view;
 		default:
@@ -81,7 +80,7 @@ public class ContentFragment extends Fragment {
 	}
 
 	public String getText() {
-		return tv_title;
+		return title;
 	}
 
 	@Override
