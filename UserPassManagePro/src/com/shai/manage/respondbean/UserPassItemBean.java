@@ -5,6 +5,10 @@ package com.shai.manage.respondbean;
  * @author Administrator 一条用户信息
  */
 public class UserPassItemBean extends BaseResult {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	// 属于安全层级1的编号
 	private int securityLevelFristID;
 	// 属于安全层级2的编号
@@ -18,6 +22,8 @@ public class UserPassItemBean extends BaseResult {
 	private String userPass;
 	private int id;
 	private String updataTime;
+	private String userPhoneNum;
+	private String userEmail;
 
 	public int getSecurityLevelFristID() {
 		return securityLevelFristID;
@@ -81,6 +87,22 @@ public class UserPassItemBean extends BaseResult {
 
 	public void setUpdataTime(String updataTime) {
 		this.updataTime = updataTime;
+	}
+
+	public String getUserPhoneNum() {
+		return userPhoneNum;
+	}
+
+	public void setUserPhoneNum(String userPhoneNum) {
+		this.userPhoneNum = userPhoneNum;
+	}
+
+	public String getUserEmail() {
+		return userEmail;
+	}
+
+	public void setUserEmail(String userEmail) {
+		this.userEmail = userEmail;
 	}
 
 }
