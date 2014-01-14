@@ -79,7 +79,7 @@ public class DemoFragmentAdapter extends PagerAdapter {
         return position;
     }
     protected  String getTag(int position){
-        return mFragmentList.get(position).getText();
+        return (String) mFragmentList.get(position).getText(position);
     }
 
 }

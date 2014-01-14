@@ -22,5 +22,9 @@ public class PassSetting {
 	 * 生成gridview内容页
 	 */
 	public static final int menu_fragment_grid_flag = 0xaa4;
+	/**
+	 * The default name for storing share history.
+	 */
+	public static final String DEFAULT_SHARE_HISTORY_FILE_NAME = "share_history.xml";
 
 }

@@ -5,13 +5,11 @@ import android.app.Fragment;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.GridView;
-import android.widget.TextView;
 
 import com.example.userpassmanagepro.R;
 import com.shai.manage.activity.PassSetting;
@@ -28,10 +26,9 @@ public class ContentFragment extends Fragment {
 	private String title;
 	// 创建哪一个内容view
 	private int caseViewKey;
-	
+
 	private GridView gridView;
 	private ViewPager vPager;
-	private TextView tv_title ;
 	private Context context;
 
 	public ContentFragment(String text, int caseViewKey) {
@@ -44,7 +41,7 @@ public class ContentFragment extends Fragment {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setRetainInstance(true);
-		Log.e("Krislq", "onCreate:" + tv_title);
+		Log.e("Krislq", "onCreate:" );
 	}
 
 	@Override
@@ -52,17 +49,15 @@ public class ContentFragment extends Fragment {
 			Bundle savedInstanceState) {
 		switch (caseViewKey) {
 		case PassSetting.main_content_frist_flag:
-			Log.e("Krislq", "onCreateView:" + tv_title);
+			Log.e("Krislq", "onCreateView:");
 			// inflater the layout
 			View view = inflater.inflate(R.layout.fragment_content_item, null);
-//			if (!TextUtils.isEmpty(tv_title)) {
-//				textView.setText(tv_title);
-//			}
+			// if (!TextUtils.isEmpty(tv_title)) {
+			// textView.setText(tv_title);
+			// }
 
 			vPager = (ViewPager) view.findViewById(R.id.vp4_grid);
 			gridView = (GridView) view.findViewById(R.id.gridView1);
-			tv_title = (TextView) view.findViewById(R.id.tv_title);
-			
 
 			return view;
 		default:
@@ -85,37 +80,37 @@ public class ContentFragment extends Fragment {
 
 	@Override
 	public void onDestroy() {
-		Log.e("Krislq", "onDestroy:" + tv_title);
+		Log.e("Krislq", "onDestroy:");
 		super.onDestroy();
 	}
 
 	@Override
 	public void onDetach() {
-		Log.e("Krislq", "onDetach:" + tv_title);
+		Log.e("Krislq", "onDetach:");
 		super.onDetach();
 	}
 
 	@Override
 	public void onPause() {
-		Log.e("Krislq", "onPause:" + tv_title);
+		Log.e("Krislq", "onPause:");
 		super.onPause();
 	}
 
 	@Override
 	public void onResume() {
-		Log.e("Krislq", "onResume:" + tv_title);
+		Log.e("Krislq", "onResume:");
 		super.onResume();
 	}
 
 	@Override
 	public void onStart() {
-		Log.e("Krislq", "onStart:" + tv_title);
+		Log.e("Krislq", "onStart:");
 		super.onStart();
 	}
 
 	@Override
 	public void onStop() {
-		Log.e("Krislq", "onStop:" + tv_title);
+		Log.e("Krislq", "onStop:");
 		super.onStop();
 	}
 

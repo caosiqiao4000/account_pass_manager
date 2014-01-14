@@ -20,7 +20,7 @@ public class StartActivity extends Activity {
 				it.setClass(StartActivity.this,MainActivity.class);
 				StartActivity.this.startActivity(it);
 			}
-		}, 3000);
+		}, 1000);
 		
 	}
 }
