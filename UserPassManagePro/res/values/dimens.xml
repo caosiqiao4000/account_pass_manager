@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+    <dimen name="adapter_item_height_35">35.0dip</dimen>
+    <dimen name="adapter_item_height_30">30.0dip</dimen>
+    <dimen name="adapter_item_height_25">25.0dip</dimen>
+    
+    
+    <dimen name="adapter_item_width_80">80.0dip</dimen>
+    <dimen name="adapter_item_width_150">150.0dip</dimen>
+
+    <dimen name="images_margin_3">3.0dip</dimen>
+    <dimen name="images_margin_5">5.0dip</dimen>
+</resources>

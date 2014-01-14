@@ -1,5 +1,6 @@
 package com.krislq.sliding.fragment;
 
+import android.annotation.SuppressLint;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -8,7 +9,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
 import com.krislq.sliding.R;
 /**
  * 
@@ -16,6 +16,7 @@ import com.krislq.sliding.R;
  * @since Mar 12, 2013
  * @version 1.0.0
  */
+@SuppressLint("ValidFragment")
 public class ContentFragment extends Fragment {
     String text = null;
 
