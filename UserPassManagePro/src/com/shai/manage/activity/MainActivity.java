@@ -9,8 +9,12 @@ import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.ext.SatelliteMenu;
+import android.view.ext.SatelliteMenuItem;
+import android.view.ext.SatelliteMenu.SateliteClickedListener;
 import android.widget.ShareActionProvider;
 
 import com.example.userpassmanagepro.R;
@@ -34,6 +38,7 @@ public class MainActivity extends SlidingActivity {
 	private ActionBarItemProvider adapterBarProvide;
 	private List<UserPassGroupBean> groups;
 	private OnNavigationListener mOnNavigationListener;
+	
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -89,12 +94,14 @@ public class MainActivity extends SlidingActivity {
 
 		actionBar.setListNavigationCallbacks(adapterBarProvide,
 				mOnNavigationListener);
+		
 	}
 
 	private void initView() {
 
 		// set the Behind View 菜单
 		setBehindContentView(R.layout.frame_menu);
+
 		FragmentTransaction fragmentTransaction = getFragmentManager()
 				.beginTransaction();
 		MenuFragment menuFragment = new MenuFragment();
@@ -130,14 +137,14 @@ public class MainActivity extends SlidingActivity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-//		getMenuInflater().inflate(R.menu.activity_main, menu);
-//		MenuItem actionItem = menu.findItem(R.id.menu_actionbar_shared);
-//		ShareActionProvider actionProvider = (ShareActionProvider) actionItem
-//				.getActionProvider();
+		// getMenuInflater().inflate(R.menu.activity_main, menu);
+		// MenuItem actionItem = menu.findItem(R.id.menu_actionbar_shared);
+		// ShareActionProvider actionProvider = (ShareActionProvider) actionItem
+		// .getActionProvider();
 		// actionProvider
 		// .setShareHistoryFileName(PassSetting.DEFAULT_SHARE_HISTORY_FILE_NAME);
 
-//		actionProvider.setShareIntent(createSharedIntent());
+		// actionProvider.setShareIntent(createSharedIntent());
 		return true;
 	}
 

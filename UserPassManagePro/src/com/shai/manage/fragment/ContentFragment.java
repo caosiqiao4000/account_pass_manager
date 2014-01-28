@@ -1,5 +1,8 @@
 package com.shai.manage.fragment;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import android.annotation.SuppressLint;
 import android.app.Fragment;
 import android.content.Context;
@@ -9,6 +12,9 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ext.SatelliteMenu;
+import android.view.ext.SatelliteMenuItem;
+import android.view.ext.SatelliteMenu.SateliteClickedListener;
 import android.widget.GridView;
 
 import com.example.userpassmanagepro.R;
@@ -26,7 +32,7 @@ public class ContentFragment extends Fragment {
 	private String title;
 	// 创建哪一个内容view
 	private int caseViewKey;
-
+	private SatelliteMenu satellite_menu;
 	private GridView gridView;
 	private ViewPager vPager;
 	private Context context;
@@ -41,7 +47,7 @@ public class ContentFragment extends Fragment {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setRetainInstance(true);
-		Log.e("Krislq", "onCreate:" );
+		Log.e("Krislq", "onCreate:");
 	}
 
 	@Override
@@ -58,19 +64,28 @@ public class ContentFragment extends Fragment {
 
 			vPager = (ViewPager) view.findViewById(R.id.vp4_grid);
 			gridView = (GridView) view.findViewById(R.id.gridView1);
+			// ==========================
+			satellite_menu = (SatelliteMenu) view
+					.findViewById(R.id.satellite_menu);
+			List<SatelliteMenuItem> items = new ArrayList<SatelliteMenuItem>();
+			items.add(new SatelliteMenuItem(4, R.drawable.ic_1));
+			items.add(new SatelliteMenuItem(4, R.drawable.ic_3));
+			items.add(new SatelliteMenuItem(4, R.drawable.ic_4));
+			items.add(new SatelliteMenuItem(3, R.drawable.ic_5));
+			items.add(new SatelliteMenuItem(2, R.drawable.ic_6));
+			items.add(new SatelliteMenuItem(1, R.drawable.ic_2));
+			satellite_menu.addItems(items);
+			satellite_menu
+					.setOnItemClickedListener(new SateliteClickedListener() {
+						public void eventOccured(int id) {
+							Log.i("sat", "Clicked on " + id);
+						}
+					});
 
 			return view;
 		default:
 			break;
 		}
-
-		// Log.e("Krislq", "onCreateView:" + text);
-		// // inflater the layout
-		// View view = inflater.inflate(R.layout.fragment_content_item, null);
-		// TextView textView = (TextView) view.findViewById(R.id.textView);
-		// if (!TextUtils.isEmpty(text)) {
-		// textView.setText(text);
-		// }
 		return null;
 	}
 
