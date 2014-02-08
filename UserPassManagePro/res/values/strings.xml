@@ -8,5 +8,16 @@
     <string name="home_search_bar_hint3">360手机助手</string>
     <string name="gro">360手机助手</string>
     <string name="share">好友分享</string>
+    <string name="add_use_pass_info">增加一条信息</string>
+    <string name="user_anme">用户名:</string>
+    <string name="user_pass">密     码:</string>
+    <string name="pass_security_level">安全等级</string>
+    <string name="security_no">一 般</string>
+    <string name="security_importance">重 要</string>
+    <string name="security_top_secret">绝 密</string>
+    <string name="submit">确  定</string>
+    <string name="cancel">取  消</string>
+    <string name="user_name_prompt">请输入用户名</string>
+    <string name="user_pass_prompt">请输入密码</string>
 
 </resources>

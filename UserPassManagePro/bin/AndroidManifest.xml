@@ -25,6 +25,8 @@
         </activity>
         <activity android:name="com.shai.manage.activity.MainActivity" >
         </activity>
+        <activity android:name="com.shai.manage.activity.other.AddUsePassActivity" >
+        </activity>
     </application>
 
 </manifest>

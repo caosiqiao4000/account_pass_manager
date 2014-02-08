@@ -9,7 +9,7 @@
         android:id="@+id/iv_group_icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/images_margin_3"
+        android:layout_margin="@dimen/layout_padd_or_margin_2"
         android:src="@drawable/umeng_socialize_at_normal" />
 
     <TextView
