@@ -4,8 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.app.Fragment;
-import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
@@ -13,12 +14,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ext.SatelliteMenu;
-import android.view.ext.SatelliteMenuItem;
 import android.view.ext.SatelliteMenu.SateliteClickedListener;
+import android.view.ext.SatelliteMenuItem;
 import android.widget.GridView;
 
 import com.example.userpassmanagepro.R;
 import com.shai.manage.activity.PassSetting;
+import com.shai.manage.activity.other.AddUsePassActivity;
+import com.shai.manage.util.Util;
 
 /**
  * 
@@ -35,7 +38,7 @@ public class ContentFragment extends Fragment {
 	private SatelliteMenu satellite_menu;
 	private GridView gridView;
 	private ViewPager vPager;
-	private Context context;
+	private Activity context;
 
 	public ContentFragment(String text, int caseViewKey) {
 		Log.e("Krislq", text);
@@ -48,6 +51,7 @@ public class ContentFragment extends Fragment {
 		super.onCreate(savedInstanceState);
 		setRetainInstance(true);
 		Log.e("Krislq", "onCreate:");
+		context = (Activity) getActivity();
 	}
 
 	@Override
@@ -78,7 +82,14 @@ public class ContentFragment extends Fragment {
 			satellite_menu
 					.setOnItemClickedListener(new SateliteClickedListener() {
 						public void eventOccured(int id) {
-							Log.i("sat", "Clicked on " + id);
+							if (PassSetting.Debug) {
+								Util.showToast(context, "选中的ID = " + id);
+							}
+							if (id == 1) {// 增加一条用户信息
+								Intent it = new Intent();
+								it.setClass(context,AddUsePassActivity.class);
+								context.startActivity(it);
+							}
 						}
 					});
 

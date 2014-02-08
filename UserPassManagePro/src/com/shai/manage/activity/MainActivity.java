@@ -1,6 +1,5 @@
 package com.shai.manage.activity;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import android.app.ActionBar;
@@ -9,16 +8,13 @@ import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.ext.SatelliteMenu;
-import android.view.ext.SatelliteMenuItem;
-import android.view.ext.SatelliteMenu.SateliteClickedListener;
-import android.widget.ShareActionProvider;
 
 import com.example.userpassmanagepro.R;
 import com.shai.manage.adapter.ActionBarItemProvider;
+import com.shai.manage.db.UserLocalGroupDao;
+import com.shai.manage.db.UserLocalGroupDaoIml;
 import com.shai.manage.fragment.ContentFragment;
 import com.shai.manage.fragment.MenuFragment;
 import com.shai.manage.impl.OnNavigationListenerImpl;
@@ -38,7 +34,7 @@ public class MainActivity extends SlidingActivity {
 	private ActionBarItemProvider adapterBarProvide;
 	private List<UserPassGroupBean> groups;
 	private OnNavigationListener mOnNavigationListener;
-	
+	private UserLocalGroupDao dao;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -51,50 +47,15 @@ public class MainActivity extends SlidingActivity {
 	}
 
 	private void initData() {
-		groups = new ArrayList<UserPassGroupBean>();
-		groups.add(new UserPassGroupBean(String
-				.valueOf(R.drawable.app_search_icon_p), "QQ"));
-		groups.add(new UserPassGroupBean(String
-				.valueOf(R.drawable.app_search_icon_p), "yy"));
-		groups.add(new UserPassGroupBean(String
-				.valueOf(R.drawable.app_search_icon_p), "ya"));
-		groups.add(new UserPassGroupBean(String
-				.valueOf(R.drawable.app_search_icon_p), "yb"));
-		groups.add(new UserPassGroupBean(String
-				.valueOf(R.drawable.app_search_icon_p), "yc"));
-		groups.add(new UserPassGroupBean(String
-				.valueOf(R.drawable.app_search_icon_p), "ye"));
-		groups.add(new UserPassGroupBean(String
-				.valueOf(R.drawable.app_search_icon_p), "yl"));
-		groups.add(new UserPassGroupBean(String
-				.valueOf(R.drawable.app_search_icon_p), "yh"));
-		groups.add(new UserPassGroupBean(String
-				.valueOf(R.drawable.app_search_icon_p), "yj"));
-		groups.add(new UserPassGroupBean(String
-				.valueOf(R.drawable.app_search_icon_p), "yk"));
-		groups.add(new UserPassGroupBean(String
-				.valueOf(R.drawable.app_search_icon_p), "y1"));
-		groups.add(new UserPassGroupBean(String
-				.valueOf(R.drawable.app_search_icon_p), "y2"));
-		groups.add(new UserPassGroupBean(String
-				.valueOf(R.drawable.app_search_icon_p), "y3"));
-		groups.add(new UserPassGroupBean(String
-				.valueOf(R.drawable.app_search_icon_p), "y4"));
-		groups.add(new UserPassGroupBean(String
-				.valueOf(R.drawable.app_search_icon_p), "y5"));
-		groups.add(new UserPassGroupBean(String
-				.valueOf(R.drawable.app_search_icon_p), "y6"));
-		groups.add(new UserPassGroupBean(String
-				.valueOf(R.drawable.app_search_icon_p), "y7"));
-		groups.add(new UserPassGroupBean(String
-				.valueOf(R.drawable.app_search_icon_p), "y8"));
+		dao = new UserLocalGroupDaoIml(this);
+		groups = dao.getAllGroupBeans();
 		adapterBarProvide = new ActionBarItemProvider(this, groups);
 
 		mOnNavigationListener = new OnNavigationListenerImpl(this);
 
 		actionBar.setListNavigationCallbacks(adapterBarProvide,
 				mOnNavigationListener);
-		
+
 	}
 
 	private void initView() {

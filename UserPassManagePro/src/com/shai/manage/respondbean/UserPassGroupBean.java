@@ -16,14 +16,26 @@ public class UserPassGroupBean extends BaseResult {
 	private static final long serialVersionUID = 1L;
 
 	private int id;
+	private String serverid;
 
 	private String decribe;
 	private String icon;
 	private String groupName;
+	// 最近一个月使用次数   每一个月末时,将使用次数折半
+	private int useNum;
+	
 	private List<UserPassItemBean> groups = new ArrayList<UserPassItemBean>();
 
 	public UserPassGroupBean() {
 	};
+
+	public String getServerid() {
+		return serverid;
+	}
+
+	public void setServerid(String serverid) {
+		this.serverid = serverid;
+	}
 
 	public UserPassGroupBean(String icon, String groupName) {
 		this.icon = icon;
@@ -68,6 +80,14 @@ public class UserPassGroupBean extends BaseResult {
 
 	public void setIcon(String icon) {
 		this.icon = icon;
+	}
+
+	public int getUseNum() {
+		return useNum;
+	}
+
+	public void setUseNum(int useNum) {
+		this.useNum = useNum;
 	}
 
 }

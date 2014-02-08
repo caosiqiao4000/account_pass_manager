@@ -9,44 +9,64 @@ public class UserPassItemBean extends BaseResult {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	// 属于安全层级1的编号
-	private int securityLevelFristID;
-	// 属于安全层级2的编号
-	private int securityLevelSecondID;
-	// 属于安全层级3的编号
-	private int securityLevelThreeID;
+	// 安全等级 "A" "AA" "AAA"
+	private String securityLevel;
+	// 属于层级1的编号id  qq
+	private int LevelFirstID;
+	// 属于层级2的编号id 国内,国外
+	private int LevelSecondID;
+	// 属于层级3的编号id  ...
+	private int LevelThreeID;
 	//
 	private String describe;
 	//
 	private String userName;
 	private String userPass;
-	private int id;
+	private int id;//本地表ID
+	private int serverID;//
+	// 更新时间
 	private String updataTime;
 	private String userPhoneNum;
 	private String userEmail;
 
-	public int getSecurityLevelFristID() {
-		return securityLevelFristID;
+
+	public int getLevelFirstID() {
+		return LevelFirstID;
 	}
 
-	public void setSecurityLevelFristID(int securityLevelFristID) {
-		this.securityLevelFristID = securityLevelFristID;
+	public void setLevelFirstID(int levelFirstID) {
+		LevelFirstID = levelFirstID;
 	}
 
-	public int getSecurityLevelSecondID() {
-		return securityLevelSecondID;
+	public int getServerID() {
+		return serverID;
 	}
 
-	public void setSecurityLevelSecondID(int securityLevelSecondID) {
-		this.securityLevelSecondID = securityLevelSecondID;
+	public void setServerID(int serverID) {
+		this.serverID = serverID;
 	}
 
-	public int getSecurityLevelThreeID() {
-		return securityLevelThreeID;
+	public String getSecurityLevel() {
+		return securityLevel;
 	}
 
-	public void setSecurityLevelThreeID(int securityLevelThreeID) {
-		this.securityLevelThreeID = securityLevelThreeID;
+	public void setSecurityLevel(String securityLevel) {
+		this.securityLevel = securityLevel;
+	}
+	public int getLevelSecondID() {
+		return LevelSecondID;
+	}
+
+	public void setLevelSecondID(int levelSecondID) {
+		LevelSecondID = levelSecondID;
+	}
+
+	public int getLevelThreeID() {
+		return LevelThreeID;
+	}
+
+	public void setLevelThreeID(int levelThreeID) {
+		LevelThreeID = levelThreeID;
 	}
 
 	public String getDescribe() {
