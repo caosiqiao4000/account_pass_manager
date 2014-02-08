@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="@dimen/layout_padd_or_margin_5" >
+
+        <!-- 分组 -->
+
+        <Spinner
+            android:id="@+id/spinner_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_padd_or_margin_10" >
+
+            <EditText
+                android:id="@+id/et_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/user_name_prompt"
+                android:paddingLeft="@dimen/adapter_item_width_80" >
+
+                <requestFocus />
+            </EditText>
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/et_name"
+                android:layout_alignBottom="@+id/et_name"
+                android:layout_alignParentLeft="true"
+                android:text="@string/user_anme"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <EditText
+                android:id="@+id/et_pass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/et_name"
+                android:layout_marginTop="@dimen/layout_padd_or_margin_10"
+                android:ems="10"
+                android:hint="@string/user_pass_prompt"
+                android:inputType="textPassword"
+                android:paddingLeft="@dimen/adapter_item_width_80" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/et_pass"
+                android:layout_alignBottom="@+id/et_pass"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="@dimen/layout_padd_or_margin_10"
+                android:text="@string/user_pass"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+        </RelativeLayout>
+
+        <RadioGroup
+            android:id="@+id/rg_level"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_padd_or_margin_10"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/rbt_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="@string/security_no" />
+
+            <RadioButton
+                android:id="@+id/rbt_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/security_importance" />
+
+            <RadioButton
+                android:id="@+id/rbt_three"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/security_top_secret" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <include layout="@layout/bottom_bar" />
+
+</LinearLayout>
