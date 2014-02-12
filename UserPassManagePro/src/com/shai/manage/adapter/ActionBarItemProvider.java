@@ -54,6 +54,7 @@ public class ActionBarItemProvider extends BaseAdapter {
 		UserPassGroupBean bean = (UserPassGroupBean) getItem(position);
 		if (convertView == null) {
 			LayoutInflater inflater = LayoutInflater.from(mContext);
+			// 横向
 			convertView = inflater.inflate(R.layout.actionbar_adapter_item,
 					parent, false);
 		}

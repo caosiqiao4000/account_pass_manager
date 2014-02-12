@@ -16,11 +16,16 @@ import android.view.ViewGroup;
 import android.view.ext.SatelliteMenu;
 import android.view.ext.SatelliteMenu.SateliteClickedListener;
 import android.view.ext.SatelliteMenuItem;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.GridView;
 
 import com.example.userpassmanagepro.R;
 import com.shai.manage.activity.PassSetting;
 import com.shai.manage.activity.other.AddUsePassActivity;
+import com.shai.manage.activity.other.PassGroupInfoActivity;
+import com.shai.manage.adapter.GridVAdapter;
+import com.shai.manage.respondbean.UserPassGroupBean;
 import com.shai.manage.util.Util;
 
 /**
@@ -39,6 +44,16 @@ public class ContentFragment extends Fragment {
 	private GridView gridView;
 	private ViewPager vPager;
 	private Activity context;
+	private List<UserPassGroupBean> groups;
+	private GridVAdapter gridVAdapter;
+
+	public ContentFragment(String text, int caseViewKey,
+			List<UserPassGroupBean> groups) {
+		Log.e("Krislq", text);
+		this.title = text;
+		this.caseViewKey = caseViewKey;
+		this.groups = groups;
+	}
 
 	public ContentFragment(String text, int caseViewKey) {
 		Log.e("Krislq", text);
@@ -50,8 +65,10 @@ public class ContentFragment extends Fragment {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setRetainInstance(true);
-		Log.e("Krislq", "onCreate:");
 		context = (Activity) getActivity();
+		if (PassSetting.Debug) {
+			Util.showToast(context, "ContentFragment onCreate ");
+		}
 	}
 
 	@Override
@@ -59,7 +76,6 @@ public class ContentFragment extends Fragment {
 			Bundle savedInstanceState) {
 		switch (caseViewKey) {
 		case PassSetting.main_content_frist_flag:
-			Log.e("Krislq", "onCreateView:");
 			// inflater the layout
 			View view = inflater.inflate(R.layout.fragment_content_item, null);
 			// if (!TextUtils.isEmpty(tv_title)) {
@@ -68,6 +84,9 @@ public class ContentFragment extends Fragment {
 
 			vPager = (ViewPager) view.findViewById(R.id.vp4_grid);
 			gridView = (GridView) view.findViewById(R.id.gridView1);
+			gridVAdapter = new GridVAdapter(context, groups);
+			gridView.setAdapter(gridVAdapter);
+			gridView.setOnItemClickListener(item_click);
 			// ==========================
 			satellite_menu = (SatelliteMenu) view
 					.findViewById(R.id.satellite_menu);
@@ -79,6 +98,9 @@ public class ContentFragment extends Fragment {
 			items.add(new SatelliteMenuItem(2, R.drawable.ic_6));
 			items.add(new SatelliteMenuItem(1, R.drawable.ic_2));
 			satellite_menu.addItems(items);
+			if (PassSetting.Debug) {
+				Util.showToast(context, "ContentFragment onCreateView");
+			}
 			satellite_menu
 					.setOnItemClickedListener(new SateliteClickedListener() {
 						public void eventOccured(int id) {
@@ -87,7 +109,7 @@ public class ContentFragment extends Fragment {
 							}
 							if (id == 1) {// 增加一条用户信息
 								Intent it = new Intent();
-								it.setClass(context,AddUsePassActivity.class);
+								it.setClass(context, AddUsePassActivity.class);
 								context.startActivity(it);
 							}
 						}
@@ -100,43 +122,66 @@ public class ContentFragment extends Fragment {
 		return null;
 	}
 
-	public String getText() {
-		return title;
-	}
+	//
+	OnItemClickListener item_click = new OnItemClickListener() {
+		@Override
+		public void onItemClick(AdapterView<?> arg0, View arg1, int position,
+				long arg3) {
+			UserPassGroupBean bean = (UserPassGroupBean) gridVAdapter
+					.getItem(position);
+			Intent it = new Intent();
+			it.setClass(getActivity(), PassGroupInfoActivity.class);
+			it.putExtra(PassSetting.default_intent_keyone, bean.getGroupName());
+			it.putExtra(PassSetting.default_intent_keytwo, bean.getId());
+			getActivity().startActivity(it);
+		}
+	};
 
 	@Override
 	public void onDestroy() {
-		Log.e("Krislq", "onDestroy:");
+		if (PassSetting.Debug) {
+			Util.showToast(context, "ContentFragment onDestroy");
+		}
 		super.onDestroy();
 	}
 
 	@Override
 	public void onDetach() {
-		Log.e("Krislq", "onDetach:");
+		if (PassSetting.Debug) {
+			Util.showToast(context, "ContentFragment onDetach");
+		}
 		super.onDetach();
 	}
 
 	@Override
 	public void onPause() {
-		Log.e("Krislq", "onPause:");
+		if (PassSetting.Debug) {
+			Util.showToast(context, "ContentFragment onPause");
+		}
 		super.onPause();
 	}
 
 	@Override
 	public void onResume() {
-		Log.e("Krislq", "onResume:");
+		if (PassSetting.Debug) {
+			Util.showToast(context, "ContentFragment onResume");
+		}
 		super.onResume();
 	}
 
 	@Override
 	public void onStart() {
-		Log.e("Krislq", "onStart:");
+		if (PassSetting.Debug) {
+			Util.showToast(context, "ContentFragment onStart");
+		}
 		super.onStart();
 	}
 
 	@Override
 	public void onStop() {
-		Log.e("Krislq", "onStop:");
+		if (PassSetting.Debug) {
+			Util.showToast(context, "ContentFragment onStop");
+		}
 		super.onStop();
 	}
 

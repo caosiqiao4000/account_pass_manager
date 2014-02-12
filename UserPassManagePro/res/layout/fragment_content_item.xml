@@ -5,6 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp4_grid"
+        android:layout_width="match_parent"
+        android:layout_height="100dip"
+        android:layout_below="@+id/fl_bottom_menu"
+        android:visibility="gone" />
+
     <FrameLayout
         android:id="@+id/fl_bottom_menu"
         android:layout_width="match_parent"
@@ -15,15 +22,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/vp4_grid"
-            android:layout_centerHorizontal="true"
-            android:numColumns="3" >
+            android:columnWidth="60dp"
+            android:horizontalSpacing="10dp"
+            android:numColumns="auto_fit"
+            android:padding="@dimen/layout_padd_or_margin_10"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="@dimen/layout_padd_or_margin_10" >
         </GridView>
 
         <android.view.ext.SatelliteMenu
             android:id="@+id/satellite_menu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            android:layout_gravity="left|bottom"
             android:layout_margin="8dp"
             sat:closeOnClick="true"
             sat:expandDuration="500"
@@ -31,12 +42,5 @@
             sat:satelliteDistance="170dp"
             sat:totalSpacingDegree="90" />
     </FrameLayout>
-    <!-- ad -->
-
-    <android.support.v4.view.ViewPager
-        android:id="@+id/vp4_grid"
-        android:layout_width="match_parent"
-        android:layout_height="100dip"
-        android:layout_below="@+id/fl_bottom_menu" />
 
 </RelativeLayout>

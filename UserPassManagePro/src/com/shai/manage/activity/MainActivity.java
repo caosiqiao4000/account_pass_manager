@@ -39,23 +39,22 @@ public class MainActivity extends SlidingActivity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setTitle("虚拟宝贝");
+		setTitle(getResources().getString(R.string.title_main));
 		setContentView(R.layout.frame_content);
 
+		dao = new UserLocalGroupDaoIml(this);
+		groups = dao.getAllGroupBeans();
 		initView();
 		initData();
 	}
 
 	private void initData() {
-		dao = new UserLocalGroupDaoIml(this);
-		groups = dao.getAllGroupBeans();
 		adapterBarProvide = new ActionBarItemProvider(this, groups);
 
 		mOnNavigationListener = new OnNavigationListenerImpl(this);
 
 		actionBar.setListNavigationCallbacks(adapterBarProvide,
 				mOnNavigationListener);
-
 	}
 
 	private void initView() {
@@ -68,8 +67,7 @@ public class MainActivity extends SlidingActivity {
 		MenuFragment menuFragment = new MenuFragment();
 		fragmentTransaction.replace(R.id.menu, menuFragment);
 		fragmentTransaction.replace(R.id.content, new ContentFragment(
-				getString(R.string.welcome),
-				PassSetting.main_content_frist_flag), "Welcome");
+				getString(R.string.welcome),PassSetting.main_content_frist_flag,groups), "Welcome");
 
 		fragmentTransaction.commit();
 

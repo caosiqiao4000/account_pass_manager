@@ -76,13 +76,14 @@ public class DBAdapter {
 	public final String PASS_DECRIBE = "db_decribe";
 	public final String PASS_NAME = "pass_name";
 	public final String PASS_VALUE = "pass_value";
+
 	public final String PASS_SECURITY_LEVEL = "pass_security";
-	public final String PASS_FIRST_LEVEL_id = "pass_first_id";
-	public final String PASS_SECOND_LEVEL_id = "pass_second_id";
-	public final String PASS_THREE_LEVEL_id = "pass_three_id";
+	public final String PASS_MULT_GROUP_id = "pass_mult_group";//
+	// 多个组ID,就使用,间隔
 	public final String PASS_UPDATA = "pass_change_time";
 	public final String PASS_PHONE_NUM = "pass_phone_num";
 	public final String PASS_USER_EMAIL = "pass_user_email";
+	public final String PASS_USER_RELEVANCE_ACCOUNT = "user_relevance";
 
 	/**
 	 * 创建手机用户数据群组表
@@ -95,18 +96,17 @@ public class DBAdapter {
 			+ " VARCHAR(100)," + PASSGROUP_NAME + " VARCHAR(15))";
 
 	/**
-	 * 创建手机用户数据群组表
+	 * 创建手机用户数据表(单条记录
 	 */
 	private String SQL_CREATE_USER_PASS_TABLE = "CREATE TABLE IF NOT EXISTS "
 			+ TABLE_USER_PASS + " (" + PASS_ID
 			+ " INTEGER PRIMARY KEY AUTOINCREMENT," + PASS_SERVER_ID
 			+ " VARCHAR(15)," + PASS_DECRIBE + " VARCHAR(100)," + PASS_NAME
 			+ " VARCHAR(45)," + PASS_VALUE + " VARCHAR(45),"
-			+ PASS_SECURITY_LEVEL + " VARCHAR(15)," + PASS_FIRST_LEVEL_id
-			+ " VARCHAR(15)," + PASS_SECOND_LEVEL_id + " VARCHAR(15),"
-			+ PASS_THREE_LEVEL_id + " VARCHAR(15)," + PASS_UPDATA
-			+ " VARCHAR(15)," + PASS_PHONE_NUM + " VARCHAR(15),"
-			+ PASS_USER_EMAIL + " VARCHAR(15))";
+			+ PASS_SECURITY_LEVEL + " VARCHAR(15)," + PASS_MULT_GROUP_id
+			+ " VARCHAR(15)," + PASS_UPDATA + " VARCHAR(15)," + PASS_PHONE_NUM
+			+ " VARCHAR(15)," + PASS_USER_RELEVANCE_ACCOUNT + " VARCHAR(45),"
+			+ PASS_USER_EMAIL + " VARCHAR(25))";
 
 	/**
 	 * 创建联系人表

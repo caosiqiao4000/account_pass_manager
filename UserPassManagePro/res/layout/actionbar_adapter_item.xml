@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="@dimen/adapter_item_width_150"
+    android:layout_width="match_parent"
     android:layout_height="@dimen/adapter_item_height_35"
     android:gravity="center"
+    android:layout_margin="@dimen/layout_padd_or_margin_5"
     android:orientation="horizontal" >
 
     <ImageView
@@ -17,7 +18,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:layout_gravity=""
+        android:gravity="center"
+        android:layout_gravity="center"
         android:text="国内共享组"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 

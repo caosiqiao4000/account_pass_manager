@@ -37,6 +37,7 @@ public class StartActivity extends Activity {
 				Intent it = new Intent();
 				it.setClass(StartActivity.this, MainActivity.class);
 				StartActivity.this.startActivity(it);
+				StartActivity.this.finish();
 			}
 		}, 1000);
 

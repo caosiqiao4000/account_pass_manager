@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_margin="@dimen/layout_padd_or_margin_5"
+    android:background="@drawable/mf_set_layout_bg"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="5dip" >
+
+    <LinearLayout
+        android:id="@+id/ll_title"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/adapter_item_height_40"
+        android:background="@drawable/mf_layout_title_click"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="5dip"
+        android:paddingRight="5dip" >
+
+        <!-- android:background="@drawable/dazong" -->
+
+        <TextView
+            android:id="@+id/tv_title_name"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:text="@string/welcome"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/text_size_15" >
+        </TextView>
+
+        <TextView
+            android:id="@id/tv_clickshop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dip"
+            android:singleLine="true"
+            android:text="@string/_click_into"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_15" >
+        </TextView>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/v_line"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:layout_weight="0"
+        android:background="@color/black" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:id="@+id/iv_icon"
+                style="@style/image_background_default_goods" />
+
+            <ProgressBar
+                android:id="@+id/iv_pro_bar2"
+                style="@style/image_background_default_goods_pd"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_detail"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/layout_padd_or_margin_2"
+            android:layout_marginTop="@dimen/layout_padd_or_margin_2"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingRight="@dimen/layout_padd_or_margin_2" >
+
+            <TextView
+                android:id="@id/tv_relevance_account"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="@string/user_relevance_account"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_15" >
+            </TextView>
+
+            <TextView
+                android:id="@id/user_pass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/user_pass"
+                android:textColor="@color/red"
+                android:textSize="@dimen/text_size_15" >
+            </TextView>
+
+            <TextView
+                android:id="@id/pass_security_level"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/layout_padd_or_margin_2"
+                android:singleLine="true"
+                android:text="@string/pass_security_level"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_15" >
+            </TextView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--
+             <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:layout_weight="0"
+            android:background="@drawable/lines" />
+    -->
+
+    <TextView
+        android:id="@+id/tv_line"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:ellipsize="none"
+        android:focusable="false"
+        android:singleLine="true"
+        android:text="@string/_line" />
+
+    <TextView
+        android:id="@id/tv_descri"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autoLink="all"
+        android:text="@string/default_prompt"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</LinearLayout>

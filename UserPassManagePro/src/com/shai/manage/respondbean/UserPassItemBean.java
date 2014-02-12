@@ -11,12 +11,8 @@ public class UserPassItemBean extends BaseResult {
 	private static final long serialVersionUID = 1L;
 	// 安全等级 "A" "AA" "AAA"
 	private String securityLevel;
-	// 属于层级1的编号id  qq
-	private int LevelFirstID;
-	// 属于层级2的编号id 国内,国外
-	private int LevelSecondID;
-	// 属于层级3的编号id  ...
-	private int LevelThreeID;
+	// 所属群组ID 属于多个群组,以-间隔    属于层级1的编号id  qq 属于层级2的编号id 国内,国外 属于层级3的编号id  ...
+	private String groupID;
 	//
 	private String describe;
 	//
@@ -26,17 +22,10 @@ public class UserPassItemBean extends BaseResult {
 	private int serverID;//
 	// 更新时间
 	private String updataTime;
+	// 关联帐号
 	private String userPhoneNum;
 	private String userEmail;
-
-
-	public int getLevelFirstID() {
-		return LevelFirstID;
-	}
-
-	public void setLevelFirstID(int levelFirstID) {
-		LevelFirstID = levelFirstID;
-	}
+	private String userRelevanceAccount;
 
 	public int getServerID() {
 		return serverID;
@@ -52,21 +41,6 @@ public class UserPassItemBean extends BaseResult {
 
 	public void setSecurityLevel(String securityLevel) {
 		this.securityLevel = securityLevel;
-	}
-	public int getLevelSecondID() {
-		return LevelSecondID;
-	}
-
-	public void setLevelSecondID(int levelSecondID) {
-		LevelSecondID = levelSecondID;
-	}
-
-	public int getLevelThreeID() {
-		return LevelThreeID;
-	}
-
-	public void setLevelThreeID(int levelThreeID) {
-		LevelThreeID = levelThreeID;
 	}
 
 	public String getDescribe() {
@@ -125,4 +99,20 @@ public class UserPassItemBean extends BaseResult {
 		this.userEmail = userEmail;
 	}
 
+	public String getGroupID() {
+		return groupID;
+	}
+
+	public void setGroupID(String groupID) {
+		this.groupID = groupID;
+	}
+
+	public String getUserRelevanceAccount() {
+		return userRelevanceAccount;
+	}
+
+	public void setUserRelevanceAccount(String userRelevanceAccount) {
+		this.userRelevanceAccount = userRelevanceAccount;
+	}
+	
 }

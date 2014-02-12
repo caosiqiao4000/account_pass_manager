@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="user_pass" type="id"></item>
+    <item name="tv_relevance_account" type="id"></item>
+    <item name="tv_clickshop" type="id"></item>
+    <item name="pass_security_level" type="id" />
+    <item name="tv_descri" type="id" />
+
+</resources>

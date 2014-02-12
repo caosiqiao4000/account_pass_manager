@@ -2,13 +2,13 @@
 
     <!--
         Base application theme, dependent on API level. This theme is replaced
-        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
     -->
     <style name="AppBaseTheme" parent="android:Theme.Light">
         <!--
             Theme customizations available in newer API levels can go in
             res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
+            backward-compatibility can go here.
         -->
     </style>
 
@@ -26,4 +26,62 @@
         <!-- <item name="android:background">@drawable/qa_actionitem_bg</item> -->
     </style>
 
+    <style name="Image_arrows"></style>
+    <!-- 商品 或者其他使用与头像无关的地方的默认背景 -->
+    <style name="image_background_default_goods" parent="@style/Image_arrows">
+        <item name="android:layout_width">80dip</item>
+        <item name="android:layout_height">80dip</item>
+        <item name="android:layout_margin">5dip</item>
+        <item name="android:src">@drawable/none_pic</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
+    <!-- 商品 或者其他使用与头像无关的地方的默认加载背景 -->
+    <style name="image_background_default_goods_pd" parent="@style/Image_arrows">
+        <item name="android:layout_width">80dip</item>
+        <item name="android:layout_height">80dip</item>
+        <item name="android:layout_margin">5dip</item>
+        <item name="android:padding">15dip</item>
+    </style>
+    
+    <!-- 默认输入框 -->
+    <style name="editView_default" parent="@android:style/Widget.EditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/adapter_item_height_40</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:background">@drawable/editv_default_bg</item>
+        <item name="android:paddingLeft">@dimen/layout_padd_or_margin_10</item>
+        <item name="android:layout_marginLeft">@dimen/layout_padd_or_margin_5</item>
+        <item name="android:paddingRight">@dimen/layout_padd_or_margin_10</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/text_size_18</item>
+    </style>
+
+     <!-- 对话框样式 -->
+    <style name="Dialog" parent="@android:style/Theme.Dialog">
+
+        <!-- 窗口的动画样式 -->
+        <item name="android:windowAnimationStyle">@style/DialogAnim</item>
+        <!-- 不要标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 整个对话框窗口的背景 -->
+        <item name="android:windowBackground">@drawable/bg_dialog</item>
+    </style>
+    <!-- 对话框窗口的动画样式 -->
+    <style name="DialogAnim">
+        <item name="android:windowEnterAnimation">@anim/dialog_enter</item>
+        <item name="android:windowExitAnimation">@anim/dialog_exit</item>
+    </style>
+    <!-- 文字样式 -->
+    <style name="DialogText">
+        <item name="android:textColor">#FF000000</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <!-- 标题样式 -->
+    <style name="DialogText.Title">
+        <item name="android:textSize">@dimen/text_size_18</item>
+        <item name="android:textStyle">bold</item>
+    </style>
 </resources>

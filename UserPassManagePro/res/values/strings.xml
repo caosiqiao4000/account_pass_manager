@@ -5,19 +5,27 @@
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
     <string name="welcome">Welcome,你可以打开Sliding Menu来切换菜单</string>
-    <string name="home_search_bar_hint3">360手机助手</string>
-    <string name="gro">360手机助手</string>
     <string name="share">好友分享</string>
-    <string name="add_use_pass_info">增加一条信息</string>
-    <string name="user_anme">用户名:</string>
-    <string name="user_pass">密     码:</string>
-    <string name="pass_security_level">安全等级</string>
+    <string name="title_addusepass">增加一条密码信息</string>
+    <string name="title_main">主 页</string>
+    <!--  -->
+    <string name="user_anme">用 户 名:</string>
+    <string name="user_pass">密         码:</string>
+    <string name="user_relevance_account">关联帐号:</string>
+    <string name="pass_security_level">安全等级:</string>
     <string name="security_no">一 般</string>
     <string name="security_importance">重 要</string>
     <string name="security_top_secret">绝 密</string>
-    <string name="submit">确  定</string>
-    <string name="cancel">取  消</string>
+    <string name="submit">确    定</string>
+    <string name="cancel">取    消</string>
     <string name="user_name_prompt">请输入用户名</string>
     <string name="user_pass_prompt">请输入密码</string>
+    <string name="default_prompt">GG/MM 说点什么吧...</string>
+    <string name="_click_into">(点击进入详细)</string>
+    <!--  -->
+    <string name="_error_html">失败啦...</string>
+    <string name="_over_prompt">确认提示</string>
+    <string name="_over_prompt_content">已经输入的信息未保存,是否确认关闭</string>
+    <string name="_line">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</string>
 
 </resources>
