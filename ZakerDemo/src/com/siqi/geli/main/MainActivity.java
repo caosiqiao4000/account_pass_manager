@@ -48,7 +48,7 @@ public class MainActivity extends Activity {
 //		data.add(new ImageInfo("模块设计", R.drawable.icon1, R.drawable.icon_bg01));
 		data.add(new ImageInfo("产品总览", R.drawable.icon1, R.drawable.icon_bg01));
 		data.add(new ImageInfo("最新资讯", R.drawable.icon2, R.drawable.icon_bg01));
-		data.add(new ImageInfo("企业介绍", R.drawable.icon3, R.drawable.icon_bg01));
+		data.add(new ImageInfo("企业介绍", R.drawable.icon3, R.drawable.icon_bg02));
 		data.add(new ImageInfo("加盟商家", R.drawable.icon4, R.drawable.icon_bg02));
 		data.add(new ImageInfo("友情链接", R.drawable.icon5, R.drawable.icon_bg02));
 		data.add(new ImageInfo("更   多", R.drawable.icon6, R.drawable.icon_bg02));

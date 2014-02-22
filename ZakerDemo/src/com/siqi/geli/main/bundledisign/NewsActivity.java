@@ -3,29 +3,30 @@ package com.siqi.geli.main.bundledisign;
 import java.util.ArrayList;
 import java.util.List;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.ListView;
 import android.widget.TextView;
 
 import com.siqi.geli.R;
 import com.siqi.geli.adapter.NewsAdapter;
+import com.siqi.geli.main.BasePullRefreListViewActivity;
+import com.siqi.geli.ui.PullToRefreshListView;
 
 /**
  * 模块设计
+ * 
  * @author Administrator
- *
+ * 
  */
-public class NewsActivity extends Activity implements OnClickListener {
+public class NewsActivity extends BasePullRefreListViewActivity implements
+		OnClickListener {
 	private TextView tv_title;
 	private Button btn_left_title;
-	private ListView lv_content;
 	private NewsAdapter adapter;
 	private List<String> designList;
-	
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -36,22 +37,22 @@ public class NewsActivity extends Activity implements OnClickListener {
 	private void init() {
 		tv_title = (TextView) findViewById(R.id.tv_title);
 		btn_left_title = (Button) findViewById(R.id.btn_left_title);
-		lv_content = (ListView) findViewById(R.id.lv_content);
-		
+		super.findPullToRefreshListView((PullToRefreshListView) findViewById(R.id.prlv_buyer));
+
 		btn_left_title.setOnClickListener(this);
 		designList = new ArrayList<String>();
 		int a = 1;
 		tv_title.setText("最新资讯");
-		designList.add("这是最新资讯"+a);
-		designList.add("这是最新资讯"+(++a));
-		designList.add("这是最新资讯"+(++a));
-		designList.add("这是最新资讯"+(++a));
-		designList.add("这是最新资讯"+(++a));
-		designList.add("这是最新资讯"+(++a));
-		designList.add("这是最新资讯"+(++a));
-		designList.add("这是最新资讯"+(++a));
-		designList.add("这是最新资讯"+(++a));
-		adapter = new NewsAdapter(this,designList);
+		designList.add("这是最新资讯" + a);
+		designList.add("这是最新资讯" + (++a));
+		designList.add("这是最新资讯" + (++a));
+		designList.add("这是最新资讯" + (++a));
+		designList.add("这是最新资讯" + (++a));
+		designList.add("这是最新资讯" + (++a));
+		designList.add("这是最新资讯" + (++a));
+		designList.add("这是最新资讯" + (++a));
+		designList.add("这是最新资讯" + (++a));
+		adapter = new NewsAdapter(this, designList);
 		lv_content.setAdapter(adapter);
 	}
 
@@ -59,9 +60,9 @@ public class NewsActivity extends Activity implements OnClickListener {
 	public void onClick(View v) {
 		if (v.getId() == btn_left_title.getId()) {
 			NewsActivity.this.finish();
-		}else if (v.getId() == tv_title.getId()) {
-			
+		} else if (v.getId() == tv_title.getId()) {
+
 		}
-		
+
 	}
 }

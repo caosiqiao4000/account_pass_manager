@@ -13,5 +13,10 @@
     <string name="_comp_callme">联系我们 </string>
     <string name="_user_discuss">用户反馈</string>
     <string name="_app_updata">版本更新</string>
+    <!--  -->
+    <string name="pull_to_refresh_pull_label">下载列表</string>
+    <string name="pull_to_refresh_refreshing_label">加载中...</string>
+    <string name="pull_to_refresh_release_label">松开后刷新</string>
+    <string name="pull_to_refresh_tap_label">点击更新</string>
 
 </resources>

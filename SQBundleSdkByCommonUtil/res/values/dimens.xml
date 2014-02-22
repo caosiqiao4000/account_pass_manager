@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="layout_padd_or_margin_2">2.0dp</dimen>
+    <dimen name="layout_padd_or_margin_5">5.0dip</dimen>
+    <dimen name="layout_padd_or_margin_10">10.0dp</dimen>
+    <dimen name="layout_padd_or_margin_15">15.0dip</dimen>
+    <dimen name="layout_padd_or_margin_20">20.0dip</dimen>
+    <dimen name="btn_default_height_30">30.0dip</dimen>
+    <dimen name="layout_item_height_42">42.0dip</dimen>
+    <dimen name="layout_item_height_45">45.0dip</dimen>
+    <!-- slidingmenu width -->
+    <dimen name="fan_width_50">50.0dp</dimen>
+    <dimen name="image_normal_widht_60">60.0dip</dimen>
+    <dimen name="layout_view_height_100">100.0dip</dimen>
+    <dimen name="view_default_height_120">120.0dp</dimen>
+
+    <!-- character size setting -->
+    <dimen name="text_size_20">20.0sp</dimen>
+    <dimen name="text_size_18">18.0dp</dimen>
+    <dimen name="text_size_15">15.0sp</dimen>
+    <dimen name="text_size_12">12.0sp</dimen>
+
+</resources>
