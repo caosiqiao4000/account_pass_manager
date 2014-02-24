@@ -37,8 +37,7 @@ public class Util {
 		String formatTime = format.format(now);
 		return formatTime;
 	}
-	
-	
+
 	public static boolean checkNetworkIsActive(Context context) {
 		boolean mIsNetworkUp = false;
 		ConnectivityManager cm = (ConnectivityManager) context
@@ -57,7 +56,8 @@ public class Util {
 	 * @param context
 	 * @return
 	 */
-	public static boolean HttpResponseStatus(Object supportResponse, Context context) {
+	public static boolean HttpResponseStatus(Object supportResponse,
+			Context context) {
 		if (supportResponse == null) {
 			showToast(context, "服务请求失败...");
 			return false;
@@ -67,7 +67,8 @@ public class Util {
 				return false;
 			}
 			if (recore.getResponseStr().trim().length() > 0) {
-				Log.i("supportResponse", "supportResponse= " + recore.getResponseStr());
+				Log.i("supportResponse",
+						"supportResponse= " + recore.getResponseStr());
 			}
 		} else {
 			if (supportResponse instanceof HttpReqCode) {
@@ -90,5 +91,29 @@ public class Util {
 	public static void showToast(Context context, int aa) {
 		Toast.makeText(context, aa, Toast.LENGTH_SHORT).show();
 	}
+
+	/** 判断邮箱是否存在 */
+	public static boolean isEmpty(String x) {
+		if (x == null) {
+			return true;
+		} else if (x.trim().equals("")) {
+			return true;
+		}
+		return false;
+	}
+
+	  /**
+     * 转换
+     * 
+     * @author caosq 2013-6-8 下午4:49:43
+     * @return
+     */
+    public static String getNowPullTime() {
+        Date now = new Date();
+        DateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm",
+                Locale.getDefault());
+        String formatTime = format.format(now);
+        return formatTime;
+    }
 
 }

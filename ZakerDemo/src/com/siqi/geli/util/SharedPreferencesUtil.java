@@ -26,8 +26,8 @@ public class SharedPreferencesUtil {
 
 	private SharedPreferences mSharedPreferences;
 
-	public SharedPreferencesUtil(Context context, String xmlName) {
-		mSharedPreferences = context.getSharedPreferences(xmlName, Context.MODE_PRIVATE);
+	public SharedPreferencesUtil(Context context) {
+		mSharedPreferences = context.getSharedPreferences(S_H_SERVICEADDRS_FLAG, Context.MODE_PRIVATE);
 	}
 
 	// 保存字符串

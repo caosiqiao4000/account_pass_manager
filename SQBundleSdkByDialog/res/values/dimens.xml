@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="default_anim_time">@android:integer/config_mediumAnimTime</dimen>
+      <!-- 底部确认按钮的高度 -->
+    <dimen name="bottom_btn_height">37dip</dimen>
+</resources>
