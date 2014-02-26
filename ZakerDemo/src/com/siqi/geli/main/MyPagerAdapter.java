@@ -25,9 +25,11 @@ import com.siqi.geli.R;
 import com.siqi.geli.main.bundledisign.AgentManageActivity;
 import com.siqi.geli.main.bundledisign.CompanyIntroductActivity;
 import com.siqi.geli.main.bundledisign.FriendLinkActivity;
+import com.siqi.geli.main.bundledisign.GeliSubsidiaryActivity;
 import com.siqi.geli.main.bundledisign.MoreManageActivity;
 import com.siqi.geli.main.bundledisign.NewsActivity;
 import com.siqi.geli.main.bundledisign.ProductListActivity;
+import com.siqi.geli.util.AppSetting;
 
 /**
  * 自定义适配器
@@ -44,8 +46,7 @@ public class MyPagerAdapter extends PagerAdapter {
 	public MyPagerAdapter(Activity activity, ArrayList<ImageInfo> data) {
 		this.activity = activity;
 		this.data = data;
-		vibrator = (Vibrator) activity
-				.getSystemService(Context.VIBRATOR_SERVICE);
+		vibrator = (Vibrator) activity.getSystemService(Context.VIBRATOR_SERVICE);
 	}
 
 	@Override
@@ -87,13 +88,10 @@ public class MyPagerAdapter extends PagerAdapter {
 			@Override
 			public View getView(int position, View convertView, ViewGroup parent) {
 				if (null == convertView) {
-					convertView = LayoutInflater.from(activity).inflate(
-							R.layout.grid_item, null);
+					convertView = LayoutInflater.from(activity).inflate(R.layout.grid_item, null);
 				}
-				ImageView iv = (ImageView) convertView
-						.findViewById(R.id.imageView1);
-				RelativeLayout relativeLayout = (RelativeLayout) convertView
-						.findViewById(R.id.relativeLayout);
+				ImageView iv = (ImageView) convertView.findViewById(R.id.imageView1);
+				RelativeLayout relativeLayout = (RelativeLayout) convertView.findViewById(R.id.relativeLayout);
 				iv.setImageResource((data.get(position)).imageId);
 				relativeLayout.setBackgroundResource((data.get(position)).bgId);
 				relativeLayout.getBackground().setAlpha(225);
@@ -106,25 +104,33 @@ public class MyPagerAdapter extends PagerAdapter {
 
 		gridView.setOnItemClickListener(new OnItemClickListener() {
 			@Override
-			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
-					long arg3) {
-				if (arg2 == 0) {//产品总览
-					Intent it = new Intent(activity,ProductListActivity.class);
+			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
+				if (arg2 == 0) {// 产品总览
+					Intent it = new Intent(activity, ProductListActivity.class);
 					activity.startActivity(it);
-				}else if (arg2 == 1 ) {//最新资讯
-					Intent it = new Intent(activity,NewsActivity.class);
+				} else if (arg2 == 1) {// 最新资讯
+					Intent it = new Intent(activity, NewsActivity.class);
 					activity.startActivity(it);
-				}else if (arg2 == 2 ) {//企业介绍
-					Intent it = new Intent(activity,CompanyIntroductActivity.class);
+				} else if (arg2 == 2) {// 企业介绍
+					Intent it = new Intent(activity, CompanyIntroductActivity.class);
+					it.putExtra(AppSetting.KEY_ONE, CompanyIntroductActivity.showCompanyIntroduct);
 					activity.startActivity(it);
-				}else if (arg2 == 3 ) {//加盟商家
-					Intent it = new Intent(activity,AgentManageActivity.class);
+				} else if (arg2 == 3) {// 加盟商家
+					Intent it = new Intent(activity, AgentManageActivity.class);
 					activity.startActivity(it);
-				}else if (arg2 == 4) {//友情链接
-					Intent it = new Intent(activity,FriendLinkActivity.class);
+				} else if (arg2 == 4) {// 产品保障
+					Intent it = new Intent(activity, CompanyIntroductActivity.class);
+					it.putExtra(AppSetting.KEY_ONE, CompanyIntroductActivity.showProductSave);
 					activity.startActivity(it);
-				}else if (arg2 == 5 ) {//更   多
-					Intent it = new Intent(activity,MoreManageActivity.class);
+				} else if (arg2 == 5) {// 售后服务
+					Intent it = new Intent(activity, CompanyIntroductActivity.class);
+					it.putExtra(AppSetting.KEY_ONE, CompanyIntroductActivity.showAftersaleserver);
+					activity.startActivity(it);
+				} else if (arg2 == 6) {// 格力旗下
+					Intent it = new Intent(activity, GeliSubsidiaryActivity.class);
+					activity.startActivity(it);
+				} else if (arg2 == 7) {// 更 多
+					Intent it = new Intent(activity, MoreManageActivity.class);
 					activity.startActivity(it);
 				}
 			}

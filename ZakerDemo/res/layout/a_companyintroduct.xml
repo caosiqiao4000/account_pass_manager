@@ -1,19 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/LinLayout.default_background_jindong"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    
     android:orientation="vertical" >
 
-    <include layout="@layout/layout_top_bar" />
+    <include android:id="@+id/aaaaabbb" layout="@layout/layout_top_bar" />
 
     <TextView
         android:id="@+id/tv_describe"
         android:layout_width="match_parent"
-        android:layout_height="0.0dip"
-        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tv_click_info"
+        android:layout_below="@+id/aaaaabbb"
         android:scrollbars="vertical"
+        android:padding="@dimen/layout_padd_or_margin_5"
         android:singleLine="false"
-        android:text="Medium Text"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:text="@string/company_top_info"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/black" />
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/tv_click_info"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_item_height_42"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:drawableRight="@drawable/right"
+        android:background="@drawable/a_linearlayout_selector"
+        android:gravity="center_vertical"
+        android:padding="@dimen/layout_padd_or_margin_7"
+        android:text="@string/user_click_info"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/black" />
+
+</RelativeLayout>

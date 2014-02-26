@@ -6,14 +6,16 @@ import java.util.List;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import com.siqi.geli.R;
 import com.siqi.geli.adapter.AgentManagerAdapter;
+import com.siqi.geli.localbean.AgentInfo;
 import com.siqi.geli.main.BasePullRefreListViewActivity;
-import com.siqi.geli.ui.PullToRefreshListView;
+import com.siqiao.sdk.pull_listview.ui.PullToRefreshListView;
 
 /**
  * 加盟商家
@@ -21,13 +23,9 @@ import com.siqi.geli.ui.PullToRefreshListView;
  * @author Administrator
  * 
  */
-public class AgentManageActivity extends BasePullRefreListViewActivity
-		implements OnClickListener {
-	private TextView tv_title;
-	private Button btn_left_title;
-	private ListView lv_content;
+public class AgentManageActivity extends BasePullRefreListViewActivity implements OnClickListener {
 	private AgentManagerAdapter adapter;
-	private List<String> designList;
+	private List<AgentInfo> designList;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -37,23 +35,32 @@ public class AgentManageActivity extends BasePullRefreListViewActivity
 	}
 
 	private void init() {
-		tv_title = (TextView) findViewById(R.id.tv_title);
-		btn_left_title = (Button) findViewById(R.id.btn_left_title);
-		super.findPullToRefreshListView((PullToRefreshListView) findViewById(R.id.prlv_buyer));
+		super.findPullToRefreshListView((PullToRefreshListView) findViewById(R.id.prlv_news));
 
 		btn_left_title.setOnClickListener(this);
-		designList = new ArrayList<String>();
-		int a = 1;
+		designList = new ArrayList<AgentInfo>();
 		tv_title.setText("加盟商家");
-		designList.add("这是加盟商家" + a);
-		designList.add("这是加盟商家" + (++a));
-		designList.add("这是加盟商家" + (++a));
-		designList.add("这是加盟商家" + (++a));
-		designList.add("这是加盟商家" + (++a));
-		designList.add("这是加盟商家" + (++a));
-		designList.add("这是加盟商家" + (++a));
-		designList.add("这是加盟商家" + (++a));
-		designList.add("这是加盟商家" + (++a));
+
+		int a = 0;
+
+		AgentInfo infoa = new AgentInfo();
+		infoa.setName("广州市择涛机电设备工程有限公司 ");
+		infoa.setUserName("店主名-张xx" + (a));
+		infoa.setMobile("15920508470");
+		infoa.setAddress(getResources().getString(R.string.user_address_info)+"广州市天河区员村二横路13号");
+		infoa.setEmail(getResources().getString(R.string.user_email_info)+"geli120@163.com");
+		infoa.setWebUrl("http://www.duotaozx.com");
+		designList.add(infoa);
+
+		for (int i = 0; i < 5; i++) {
+			AgentInfo info = new AgentInfo();
+			info.setName("我是加盟商家 " + (++a));
+			info.setUserName("店主名-张xx" + (a));
+			info.setMobile("158888888" + a);
+			info.setWebUrl("http://www.duotaozx.com");
+			info.setEmail("geli120@163.com");
+			designList.add(info);
+		}
 		adapter = new AgentManagerAdapter(this, designList);
 		lv_content.setAdapter(adapter);
 	}
@@ -66,5 +73,15 @@ public class AgentManageActivity extends BasePullRefreListViewActivity
 
 		}
 
+	}
+
+	@Override
+	public void onRefresh() {
+		prlv_base.onRefreshComplete();
+		
+	}
+
+	@Override
+	public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
 	}
 }

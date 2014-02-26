@@ -41,12 +41,12 @@
                 <TextView
                     android:layout_width="0dip"
                     android:layout_height="wrap_content"
-                    android:gravity="center_vertical"
                     android:layout_marginLeft="10dip"
                     android:layout_weight="1"
-                    android:text="@string/company_info"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/action_settings"
                     android:textColor="@color/black"
-                    android:textSize="17.0sp" />
+                    android:textSize="@dimen/text_size_18" />
 
                 <ImageView
                     style="@style/ImageStyle.arrows_no_circle"
@@ -76,7 +76,7 @@
                     android:gravity="fill_horizontal"
                     android:text="@string/_user_discuss"
                     android:textColor="@color/black"
-                    android:textSize="17.0sp" />
+                    android:textSize="@dimen/text_size_18" />
 
                 <ImageView
                     style="@style/ImageStyle.arrows_no_circle"
@@ -106,7 +106,7 @@
                     android:gravity="fill_horizontal"
                     android:text="@string/_app_updata"
                     android:textColor="@color/black"
-                    android:textSize="17.0sp" />
+                    android:textSize="@dimen/text_size_18" />
 
                 <ImageView
                     style="@style/ImageStyle.arrows_no_circle"

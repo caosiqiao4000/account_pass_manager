@@ -7,13 +7,14 @@ import android.os.Bundle;
 import android.view.Surface;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.TextView;
 
 import com.siqi.geli.R;
 import com.siqi.geli.adapter.ProductBundleDesignAdapter;
 import com.siqi.geli.main.BasePullRefreListViewActivity;
-import com.siqi.geli.ui.PullToRefreshListView;
+import com.siqiao.sdk.pull_listview.ui.PullToRefreshListView;
 
 /**
  * 产品总览
@@ -23,8 +24,7 @@ import com.siqi.geli.ui.PullToRefreshListView;
  */
 public class ProductListActivity extends BasePullRefreListViewActivity
 		implements OnClickListener {
-	private TextView tv_title;
-	private Button btn_left_title;
+
 	private ProductBundleDesignAdapter adapter;
 	private List<String> designList;
 
@@ -38,7 +38,7 @@ public class ProductListActivity extends BasePullRefreListViewActivity
 	private void init() {
 		tv_title = (TextView) findViewById(R.id.tv_title);
 		btn_left_title = (Button) findViewById(R.id.btn_left_title);
-		super.findPullToRefreshListView((PullToRefreshListView) findViewById(R.id.prlv_buyer));
+		super.findPullToRefreshListView((PullToRefreshListView) findViewById(R.id.prlv_productlist));
 
 		tv_title.setText("产品总览");
 		btn_left_title.setOnClickListener(this);
@@ -55,6 +55,7 @@ public class ProductListActivity extends BasePullRefreListViewActivity
 		designList.add("这是产品总览" + (++a));
 		adapter = new ProductBundleDesignAdapter(this, designList);
 		lv_content.setAdapter(adapter);
+		
 	}
 
 	@Override
@@ -65,5 +66,15 @@ public class ProductListActivity extends BasePullRefreListViewActivity
 
 		}
 
+	}
+
+	@Override
+	public void onRefresh() {
+		// 
+		prlv_base.onRefreshComplete();
+	}
+
+	@Override
+	public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
 	}
 }

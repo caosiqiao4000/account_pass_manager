@@ -6,13 +6,14 @@ import java.util.List;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.TextView;
 
 import com.siqi.geli.R;
 import com.siqi.geli.adapter.NewsAdapter;
 import com.siqi.geli.main.BasePullRefreListViewActivity;
-import com.siqi.geli.ui.PullToRefreshListView;
+import com.siqiao.sdk.pull_listview.ui.PullToRefreshListView;
 
 /**
  * 模块设计
@@ -20,8 +21,7 @@ import com.siqi.geli.ui.PullToRefreshListView;
  * @author Administrator
  * 
  */
-public class NewsActivity extends BasePullRefreListViewActivity implements
-		OnClickListener {
+public class NewsActivity extends BasePullRefreListViewActivity implements OnClickListener {
 	private TextView tv_title;
 	private Button btn_left_title;
 	private NewsAdapter adapter;
@@ -37,7 +37,7 @@ public class NewsActivity extends BasePullRefreListViewActivity implements
 	private void init() {
 		tv_title = (TextView) findViewById(R.id.tv_title);
 		btn_left_title = (Button) findViewById(R.id.btn_left_title);
-		super.findPullToRefreshListView((PullToRefreshListView) findViewById(R.id.prlv_buyer));
+		super.findPullToRefreshListView((PullToRefreshListView) findViewById(R.id.prlv_productlist));
 
 		btn_left_title.setOnClickListener(this);
 		designList = new ArrayList<String>();
@@ -64,5 +64,15 @@ public class NewsActivity extends BasePullRefreListViewActivity implements
 
 		}
 
+	}
+
+	@Override
+	public void onRefresh() {
+		prlv_base.onRefreshComplete();
+
+	}
+
+	@Override
+	public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
 	}
 }

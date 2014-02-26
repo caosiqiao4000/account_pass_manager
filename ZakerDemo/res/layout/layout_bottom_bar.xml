@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/layout_item_height_42"
+    android:layout_gravity="bottom"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="@dimen/layout_padd_or_margin_5" >
+
+    <Button
+        android:id="@+id/submit"
+        style="@style/button_default_style"
+        android:layout_margin="@dimen/layout_padd_or_margin_10"
+        android:layout_weight="1"
+        android:text="@string/submit" />
+
+    <Button
+        android:id="@+id/cancel"
+        style="@style/button_default_style"
+        android:layout_margin="@dimen/layout_padd_or_margin_10"
+        android:layout_weight="1"
+        android:visibility="gone"
+        android:text="@string/cancel" />
+
+</LinearLayout>

@@ -5,15 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-
     <include layout="@layout/layout_top_bar" />
 
     <com.siqiao.sdk.pull_listview.ui.PullToRefreshListView
-        android:id="@+id/prlv_news"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:cacheColorHint="#00000000"
-        android:clickable="true"
-        my:ptrTag="pl_buyer" />
+        android:id="@+id/prlv_sub_geli"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </com.siqiao.sdk.pull_listview.ui.PullToRefreshListView>
 
 </LinearLayout>

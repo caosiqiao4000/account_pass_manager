@@ -12,7 +12,10 @@
     <drawable name="popup_bg_white">#ffffff</drawable>
     <drawable name="drawable_divider">#BDBDBD</drawable>
 
+    
     <color name="title_bg">#333333</color>
+    <color name="mainblue_one">#51B4E5</color>
+    <!--  -->
     <color name="text_radio">#C3C3C3</color>
     <color name="radio_bg">#97989B</color>
     <!-- 白色 带灰 作布局背景  QQ背景 -->
