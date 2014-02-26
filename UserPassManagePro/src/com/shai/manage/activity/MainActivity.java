@@ -1,5 +1,6 @@
 package com.shai.manage.activity;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import android.app.ActionBar;
@@ -49,25 +50,29 @@ public class MainActivity extends SlidingActivity {
 	}
 
 	private void initData() {
-		adapterBarProvide = new ActionBarItemProvider(this, groups);
+		List<String> titleList = new ArrayList<String>();
+		titleList.add(getResources().getString(R.string.security_no));
+		titleList.add(getResources().getString(R.string.security_importance));
+		titleList.add(getResources().getString(R.string.security_top_secret));
+
+		adapterBarProvide = new ActionBarItemProvider(this, titleList);
 
 		mOnNavigationListener = new OnNavigationListenerImpl(this);
 
-		actionBar.setListNavigationCallbacks(adapterBarProvide,
-				mOnNavigationListener);
+		actionBar.setListNavigationCallbacks(adapterBarProvide, mOnNavigationListener);
 	}
 
 	private void initView() {
 
 		// set the Behind View 菜单
 		setBehindContentView(R.layout.frame_menu);
-
-		FragmentTransaction fragmentTransaction = getFragmentManager()
-				.beginTransaction();
+		// 菜单页
+		FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
 		MenuFragment menuFragment = new MenuFragment();
 		fragmentTransaction.replace(R.id.menu, menuFragment);
-		fragmentTransaction.replace(R.id.content, new ContentFragment(
-				getString(R.string.welcome),PassSetting.main_content_frist_flag,groups), "Welcome");
+		// 主页内容
+		fragmentTransaction.replace(R.id.content, new ContentFragment(getString(R.string.welcome),
+				PassSetting.main_content_frist_flag, groups), "Welcome");
 
 		fragmentTransaction.commit();
 
@@ -126,8 +131,7 @@ public class MainActivity extends SlidingActivity {
 			return true;
 		case R.id.menu_actionbar_shared:
 			if (PassSetting.Debug) {
-				Util.showToast(MainActivity.this,
-						"点击了  menu_select_group actionaBar");
+				Util.showToast(MainActivity.this, "点击了  menu_select_group actionaBar");
 			}
 			// getSlidingMenu().showMenu();// show menu
 			// getSlidingMenu().showContent();//show content

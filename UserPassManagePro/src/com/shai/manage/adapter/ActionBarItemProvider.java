@@ -7,7 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -21,10 +20,10 @@ import com.shai.manage.respondbean.UserPassGroupBean;
  * 
  */
 public class ActionBarItemProvider extends BaseAdapter {
-	private List<UserPassGroupBean> groups;
+	private List<String> groups;
 	private Context mContext;
 
-	public ActionBarItemProvider(Context context, List<UserPassGroupBean> groups) {
+	public ActionBarItemProvider(Context context, List<String> groups) {
 		this.groups = groups;
 		this.mContext = context;
 	}
@@ -51,20 +50,14 @@ public class ActionBarItemProvider extends BaseAdapter {
 
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
-		UserPassGroupBean bean = (UserPassGroupBean) getItem(position);
+		String bean = (String) getItem(position);
 		if (convertView == null) {
 			LayoutInflater inflater = LayoutInflater.from(mContext);
 			// 横向
-			convertView = inflater.inflate(R.layout.actionbar_adapter_item,
-					parent, false);
+			convertView = inflater.inflate(R.layout.ada_simple_text, parent, false);
 		}
-
-		ImageView iv_group_icon = (ImageView) convertView
-				.findViewById(R.id.iv_group_icon);
-		iv_group_icon.setImageResource(Integer.valueOf(bean.getIcon()));
-		TextView tv_group_name = (TextView) convertView
-				.findViewById(R.id.tv_group_name);
-		tv_group_name.setText(bean.getGroupName());
+		TextView tv_group_name = (TextView) convertView;
+		tv_group_name.setText(bean);
 		convertView.setTag(position);
 		return convertView;
 	}

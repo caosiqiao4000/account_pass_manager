@@ -6,9 +6,11 @@ import android.R.plurals;
 import android.app.Activity;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.userpassmanagepro.R;
@@ -25,7 +27,7 @@ public class GridVAdapter extends BaseAdapter {
 
 	@Override
 	public int getCount() {
-		if (null == groups) {
+		if (null == groups) { 
 			return 0;
 		}
 		return groups.size();
@@ -57,7 +59,11 @@ public class GridVAdapter extends BaseAdapter {
 
 		TextView tv_group_name = (TextView) convertView
 				.findViewById(R.id.tv_groupname);
+		TextView tv_descript = (TextView) convertView
+				.findViewById(R.id.tv_descript);
+		
 		tv_group_name.setText(bean.getGroupName());
+		tv_descript.setText(bean.getDecribe());
 		convertView.setTag(position);
 		return convertView;
 	}
