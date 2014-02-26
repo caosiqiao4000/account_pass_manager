@@ -1,0 +1,35 @@
+# view res/layout/main.xml #generated:12
+-keep class android.support.v4.view.ViewPager { <init>(...); }
+
+# view AndroidManifest.xml #generated:28
+-keep class com.siqi.geli.main.MainActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:52
+-keep class com.siqi.geli.main.bundledisign.AgentManageActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:37
+-keep class com.siqi.geli.main.bundledisign.CompanyIntroductActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:46
+-keep class com.siqi.geli.main.bundledisign.FriendLinkActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:55
+-keep class com.siqi.geli.main.bundledisign.GeliSubsidiaryActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:49
+-keep class com.siqi.geli.main.bundledisign.MoreManageActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:43
+-keep class com.siqi.geli.main.bundledisign.NewsActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:40
+-keep class com.siqi.geli.main.bundledisign.ProductListActivity { <init>(...); }
+
+# view res/layout/a_agent_manage.xml #generated:11
+# view res/layout/a_geli_sub.xml #generated:10
+# view res/layout/a_product_design.xml #generated:11
+-keep class com.siqiao.sdk.pull_listview.ui.PullToRefreshListView { <init>(...); }
+
+# view res/layout/sh_webview.xml #generated:23
+-keep class com.siqiao.sdk.webview.ui.CustomWebView { <init>(...); }
+

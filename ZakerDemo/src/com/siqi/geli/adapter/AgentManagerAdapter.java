@@ -47,7 +47,7 @@ public class AgentManagerAdapter extends BaseAdapter implements OnClickListener 
 		if (convertView == null) {
 			convertView = LayoutInflater.from(activity).inflate(R.layout.users_item, null);
 		}
-		//
+		//  
 		ImageView user_icon = (ImageView) convertView.findViewById(R.id.iv_usericon);
 		TextView tv_userName = (TextView) convertView.findViewById(R.id.tv_username);
 		TextView tv_phone_num = (TextView) convertView.findViewById(R.id.tv_usersign);

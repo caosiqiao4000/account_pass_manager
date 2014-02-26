@@ -47,8 +47,8 @@ public class AgentManageActivity extends BasePullRefreListViewActivity implement
 		infoa.setName("广州市择涛机电设备工程有限公司 ");
 		infoa.setUserName("店主名-张xx" + (a));
 		infoa.setMobile("15920508470");
-		infoa.setAddress(getResources().getString(R.string.user_address_info)+"广州市天河区员村二横路13号");
-		infoa.setEmail(getResources().getString(R.string.user_email_info)+"geli120@163.com");
+		infoa.setAddress(getResources().getString(R.string.user_address_info) + "广州市天河区员村二横路13号");
+		infoa.setEmail(getResources().getString(R.string.user_email_info) + "geli120@163.com");
 		infoa.setWebUrl("http://www.duotaozx.com");
 		designList.add(infoa);
 
@@ -58,10 +58,12 @@ public class AgentManageActivity extends BasePullRefreListViewActivity implement
 			info.setUserName("店主名-张xx" + (a));
 			info.setMobile("158888888" + a);
 			info.setWebUrl("http://www.duotaozx.com");
-			info.setEmail("geli120@163.com");
+			info.setEmail(getResources().getString(R.string.user_email_info)+"geli120@163.com");
+			info.setAddress(getResources().getString(R.string.user_address_info) + "无地址");
 			designList.add(info);
 		}
 		adapter = new AgentManagerAdapter(this, designList);
+		lv_content.setDividerHeight(0);
 		lv_content.setAdapter(adapter);
 	}
 
@@ -78,7 +80,7 @@ public class AgentManageActivity extends BasePullRefreListViewActivity implement
 	@Override
 	public void onRefresh() {
 		prlv_base.onRefreshComplete();
-		
+
 	}
 
 	@Override
