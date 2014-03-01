@@ -14,7 +14,7 @@ import android.widget.TextView;
 import com.siqi.geli.R;
 import com.siqi.geli.localbean.AgentInfo;
 import com.siqi.geli.main.bundledisign.AgentManageActivity;
-import com.siqiao.sdk.common.util.PhoneHardwareUtil;
+import com.siqiao.sdk.common.util.UtilByPhoneHardware;
 
 public class AgentManagerAdapter extends BaseAdapter implements OnClickListener {
 	private Activity activity;
@@ -74,7 +74,7 @@ public class AgentManagerAdapter extends BaseAdapter implements OnClickListener 
 		if (v.getId() == R.id.tv_weburl) {
 			int position = (Integer) v.getTag();
 			final AgentInfo item = (AgentInfo) getItem(position);
-			PhoneHardwareUtil.toOSWebViewIntent(activity, item.getWebUrl());
+			UtilByPhoneHardware.toOSWebViewIntent(activity, item.getWebUrl());
 		} else {
 			View llview = v.findViewById(R.id.ll_hide_info);
 			if (llview.getVisibility() == View.GONE) {

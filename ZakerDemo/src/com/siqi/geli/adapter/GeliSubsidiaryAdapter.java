@@ -9,14 +9,12 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.siqi.geli.R;
-import com.siqi.geli.localbean.AgentInfo;
 import com.siqi.geli.localbean.GeliSubsidiaryBean;
 import com.siqi.geli.main.bundledisign.GeliSubsidiaryActivity;
-import com.siqiao.sdk.common.util.PhoneHardwareUtil;
+import com.siqiao.sdk.common.util.UtilByPhoneHardware;
 
 public class GeliSubsidiaryAdapter extends BaseAdapter implements OnClickListener {
 
@@ -78,7 +76,7 @@ public class GeliSubsidiaryAdapter extends BaseAdapter implements OnClickListene
 		if (v.getId() == R.id.submit) { // 打电话
 			int position = (Integer) v.getTag();
 			final GeliSubsidiaryBean item = (GeliSubsidiaryBean) getItem(position);
-			PhoneHardwareUtil.toOSCallPhoneIntent(activity, item.getPhone());
+			UtilByPhoneHardware.toOSCallPhoneIntent(activity, item.getPhone());
 		}
 	}
 

@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 import com.siqi.geli.R;
 import com.siqi.geli.util.AppSetting;
-import com.siqiao.sdk.common.util.PhoneHardwareUtil;
+import com.siqiao.sdk.common.util.UtilByPhoneHardware;
 
 /**
  * 企业介绍
@@ -64,7 +64,7 @@ public class CompanyIntroductActivity extends Activity implements OnClickListene
 		} else if (v.getId() == tv_title.getId()) {
 
 		} else if (v.getId() == tv_click_info.getId()) {// 查看详情
-			PhoneHardwareUtil.toOSWebViewIntent(this, "http://www.gree.com.cn");
+			UtilByPhoneHardware.toOSWebViewIntent(this, "http://www.gree.com.cn");
 		}
 	}
 }
