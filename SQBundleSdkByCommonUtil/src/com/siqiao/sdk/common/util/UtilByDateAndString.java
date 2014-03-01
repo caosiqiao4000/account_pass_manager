@@ -17,7 +17,7 @@ import android.widget.Toast;
  * @author Administrator
  * 
  */
-public class DateAndStringUtil {
+public class UtilByDateAndString {
 
 	/**
 	 * prompt user

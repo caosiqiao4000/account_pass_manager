@@ -14,7 +14,7 @@ import android.net.Uri;
  * @author Administrator
  * 
  */
-public class PhoneHardwareUtil {
+public class UtilByPhoneHardware {
 
 	/**
 	 * 检查是否有网络
