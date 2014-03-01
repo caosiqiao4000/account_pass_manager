@@ -1,6 +1,6 @@
 package com.shai.manage.ui;
 
-import android.app.AlertDialog;
+import android.app.Activity;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
@@ -16,7 +16,6 @@ import android.widget.TextView;
 
 import com.example.userpassmanagepro.R;
 import com.shai.manage.activity.PassSetting;
-import com.shai.manage.activity.other.AddUsePassActivity;
 
 /**
  * 
@@ -25,7 +24,7 @@ import com.shai.manage.activity.other.AddUsePassActivity;
  */
 public class CustomDialogFragment extends DialogFragment {
 	int mNum;
-	private AddUsePassActivity activity;
+	private Activity activity;
 	private LayoutInflater inflater;
 	private String title;
 	private String message;
@@ -39,7 +38,7 @@ public class CustomDialogFragment extends DialogFragment {
 		super();
 	}
 
-	public static CustomDialogFragment newInstance(AddUsePassActivity activity,
+	public static CustomDialogFragment newInstance(Activity activity,
 			int num) {
 		CustomDialogFragment frag = new CustomDialogFragment();
 		frag.activity = activity;

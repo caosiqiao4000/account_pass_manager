@@ -38,9 +38,14 @@ public interface UserLocalGroupDao {
 	 * @createtime 2012-9-1
 	 * @param UserPassGroupBeans
 	 */
-	public void saveAllUserPassGroupBean(
-			List<UserPassGroupBean> UserPassGroupBeans);
+	public void saveAllUserPassGroupBean(List<UserPassGroupBean> UserPassGroupBeans);
 
+	/**
+	 * 保存一个组信息
+	 * 
+	 * @param bean
+	 */
+	public boolean saveUserPassGroup(UserPassGroupBean bean);
 
 	/**
 	 * 保存一个用户密码信息

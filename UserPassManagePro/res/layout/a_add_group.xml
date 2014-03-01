@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-      <ScrollView
+
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dip"
         android:layout_weight="1" >
@@ -21,140 +22,49 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
                 android:orientation="horizontal" >
-
-                <Spinner
-                    android:id="@+id/spinner_group"
-                    android:layout_width="0.0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
-
-                <Button
-                    android:id="@+id/btn_add_group"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="+ 组" />
             </LinearLayout>
 
             <RelativeLayout
                 android:layout_width="match_parent"
+                android:gravity="center_vertical"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/layout_padd_or_margin_10"
                 android:layout_marginTop="@dimen/layout_padd_or_margin_10" >
 
                 <EditText
-                    android:id="@+id/et_name"
+                    android:id="@+id/et_group_name"
                     style="@style/editView_default"
+                    android:layout_toLeftOf="@+id/cb_openbypass"
                     android:ems="10"
-                    android:hint="@string/user_name_prompt"
+                    android:maxLength="50"
                     android:paddingLeft="@dimen/adapter_item_width_80" >
                 </EditText>
 
                 <TextView
-                    android:id="@+id/tv_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignBaseline="@+id/et_name"
-                    android:layout_alignBottom="@+id/et_name"
+                    android:layout_alignBaseline="@+id/et_group_name"
+                    android:layout_alignBottom="@+id/et_group_name"
                     android:layout_alignParentLeft="true"
                     android:layout_marginLeft="@dimen/layout_padd_or_margin_10"
                     android:text="@string/group_name"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
                 <!-- 关联帐号 -->
-
-                <EditText
-                    android:id="@+id/et_relevance_account"
-                    style="@style/editView_default"
-                    android:layout_below="@+id/et_pass"
-                    android:layout_marginTop="@dimen/layout_padd_or_margin_10"
-                    android:ems="10"
-                    android:inputType="text"
-                    android:paddingLeft="@dimen/adapter_item_width_80" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBaseline="@+id/et_relevance_account"
-                    android:layout_alignBottom="@+id/et_relevance_account"
-                    android:layout_alignParentLeft="true"
-                    android:layout_marginLeft="@dimen/layout_padd_or_margin_10"
-                    android:layout_marginTop="@dimen/layout_padd_or_margin_10"
-                    android:text="@string/user_relevance_account"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
                 <!-- 关联手机 -->
-
-                <EditText
-                    android:id="@+id/et_relevance_phone"
-                    style="@style/editView_default"
-                    android:layout_below="@+id/et_relevance_account"
-                    android:layout_marginTop="@dimen/layout_padd_or_margin_10"
-                    android:ems="10"
-                    android:inputType="phone"
-                    android:paddingLeft="@dimen/adapter_item_width_80" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBaseline="@+id/et_relevance_phone"
-                    android:layout_alignBottom="@+id/et_relevance_phone"
-                    android:layout_alignParentLeft="true"
-                    android:layout_marginLeft="@dimen/layout_padd_or_margin_10"
-                    android:layout_marginTop="@dimen/layout_padd_or_margin_10"
-                    android:text="@string/user_relevance_phone"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
                 <!-- 关联邮箱 -->
 
-                <EditText
-                    android:id="@+id/et_relevance_email"
-                    style="@style/editView_default"
-                    android:layout_below="@+id/et_relevance_phone"
-                    android:layout_marginTop="@dimen/layout_padd_or_margin_10"
-                    android:ems="10"
-                    android:inputType="textEmailAddress"
-                    android:paddingLeft="@dimen/adapter_item_width_80" />
-
-                <TextView
+                <CheckBox
+                    android:id="@+id/cb_openbypass"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignBaseline="@+id/et_relevance_email"
-                    android:layout_alignBottom="@+id/et_relevance_email"
-                    android:layout_alignParentLeft="true"
-                    android:layout_marginLeft="@dimen/layout_padd_or_margin_10"
-                    android:layout_marginTop="@dimen/layout_padd_or_margin_10"
-                    android:text="@string/user_relevance_email"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="密码锁" />
+
             </RelativeLayout>
 
-            <RadioGroup
-                android:id="@+id/rg_level"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/layout_padd_or_margin_10"
-                android:orientation="horizontal" >
-
-                <RadioButton
-                    android:id="@+id/rbt_one"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:checked="true"
-                    android:text="@string/security_no" />
-
-                <RadioButton
-                    android:id="@+id/rbt_two"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/security_importance" />
-
-                <RadioButton
-                    android:id="@+id/rbt_three"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/security_top_secret" />
-            </RadioGroup>
-
             <EditText
-                android:id="@+id/et_decri"
+                android:id="@+id/et_group_decri"
                 style="@style/editView_default"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/view_default_height_120"

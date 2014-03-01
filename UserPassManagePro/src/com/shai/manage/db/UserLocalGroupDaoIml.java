@@ -203,4 +203,10 @@ public class UserLocalGroupDaoIml implements UserLocalGroupDao {
 		}
 		return isSuccess;
 	}
+
+	@Override
+	public boolean saveUserPassGroup(UserPassGroupBean bean) {
+		// TODO Auto-generated method stub
+		return false;
+	}
 }

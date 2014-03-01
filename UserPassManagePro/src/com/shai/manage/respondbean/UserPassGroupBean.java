@@ -23,6 +23,8 @@ public class UserPassGroupBean extends BaseResult {
 	private String groupName;
 	// 最近一个月使用次数   每一个月末时,将使用次数折半
 	private int useNum;
+	//打开是否需要密码  0x00 不需要 0x01 需要
+	private int openByPass;
 	
 	private List<UserPassItemBean> groups = new ArrayList<UserPassItemBean>();
 
@@ -90,4 +92,11 @@ public class UserPassGroupBean extends BaseResult {
 		this.useNum = useNum;
 	}
 
+	public int getOpenByPass() {
+		return openByPass;
+	}
+
+	public void setOpenByPass(int openByPass) {
+		this.openByPass = openByPass;
+	}
 }

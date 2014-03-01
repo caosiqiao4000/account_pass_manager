@@ -8,6 +8,7 @@
     <string name="share">好友分享</string>
     <string name="title_addusepass">增加一条密码信息</string>
     <string name="title_main">主 页</string>
+    <string name="title_addgroup">添加一个组</string>
     <!--  -->
     <string name="user_anme">用 户 名:</string>
     <string name="user_pass">密         码:</string>
