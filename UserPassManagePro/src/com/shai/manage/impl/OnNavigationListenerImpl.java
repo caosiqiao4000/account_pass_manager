@@ -21,8 +21,6 @@ public class OnNavigationListenerImpl implements OnNavigationListener {
 					"onNavigationItemSelected itemPosition = " + itemPosition
 							+ " itemId= " + itemId);
 		}
-		Util.showToast(context, "onNavigationItemSelected itemPosition = "
-				+ itemPosition + " itemId= " + itemId);
 		return false;
 	}
 

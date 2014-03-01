@@ -31,18 +31,18 @@ public class MenuFragment extends Fragment {
 		tv_notepad = (TextView) view.findViewById(R.id.tv_notepad);
 		tv_concern = (TextView) view.findViewById(R.id.tv_concern);
 		lv_menu_friend = (ListView) view.findViewById(R.id.lv_menu_friend);
-		if (PassSetting.Debug) {
-			Log.i(PassSetting.Debug_flag, "MenuFragment is onCreateView ...");
-		}
+//		if (PassSetting.Debug) {
+//			Log.i(PassSetting.Debug_flag, "MenuFragment is onCreateView ...");
+//		}
 		return view;
 	}
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		if (PassSetting.Debug) {
-			Log.i(PassSetting.Debug_flag, "MenuFragment is onCreate ...");
-		}
+//		if (PassSetting.Debug) {
+//			Log.i(PassSetting.Debug_flag, "MenuFragment is onCreate ...");
+//		}
 		context = getActivity();
 	}
 

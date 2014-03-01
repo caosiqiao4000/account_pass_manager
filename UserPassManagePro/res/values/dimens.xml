@@ -12,6 +12,7 @@
     <dimen name="adapter_item_height_40">40.0dp</dimen>
     <dimen name="adapter_item_height_45">45.0dp</dimen>
     <dimen name="btn_default_width_50">50.0dip</dimen>
+    <dimen name="image_normal_widht_60">60.0dp</dimen>
     <dimen name="adapter_item_width_80">80.0dip</dimen>
     <dimen name="view_default_height_120">120.0dp</dimen>
     <dimen name="adapter_item_width_150">150.0dip</dimen>

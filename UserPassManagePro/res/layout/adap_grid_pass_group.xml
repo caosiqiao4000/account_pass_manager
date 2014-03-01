@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/adapter_item_width_80"
+    android:layout_height="@dimen/image_normal_widht_60"
     android:orientation="horizontal" >
 
     <RelativeLayout
         android:layout_width="0.0dip"
         android:layout_height="match_parent"
         android:padding="@dimen/layout_padd_or_margin_5"
-        android:clickable="true"
-        android:focusable="true"
         android:layout_weight="1" >
 
         <ImageView

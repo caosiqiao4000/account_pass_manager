@@ -12,7 +12,11 @@
     <string name="user_anme">用 户 名:</string>
     <string name="user_pass">密         码:</string>
     <string name="user_relevance_account">关联帐号:</string>
+    <string name="user_relevance_phone">关联手机:</string>
+    <string name="user_relevance_email">关联邮箱:</string>
     <string name="pass_security_level">安全等级:</string>
+    <string name="group_name">组   名:</string>
+    <!--  -->
     <string name="security_no">一 般</string>
     <string name="security_importance">重 要</string>
     <string name="security_top_secret">绝 密</string>

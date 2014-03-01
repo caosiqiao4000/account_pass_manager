@@ -16,11 +16,11 @@ import android.widget.TextView;
 import com.example.userpassmanagepro.R;
 import com.shai.manage.respondbean.UserPassGroupBean;
 
-public class GridVAdapter extends BaseAdapter {
+public class ContentFragOneAdapter extends BaseAdapter {
 	private Activity mContext;
 	private List<UserPassGroupBean> groups;
 
-	public GridVAdapter(Activity context, List<UserPassGroupBean> groups) {
+	public ContentFragOneAdapter(Activity context, List<UserPassGroupBean> groups) {
 		this.mContext = context;
 		this.groups = groups;
 	}

@@ -19,11 +19,11 @@ import com.shai.manage.respondbean.UserPassGroupBean;
  * @author Administrator
  * 
  */
-public class ActionBarItemProvider extends BaseAdapter {
+public class ActionBarItemAdapter extends BaseAdapter {
 	private List<String> groups;
 	private Context mContext;
 
-	public ActionBarItemProvider(Context context, List<String> groups) {
+	public ActionBarItemAdapter(Context context, List<String> groups) {
 		this.groups = groups;
 		this.mContext = context;
 	}

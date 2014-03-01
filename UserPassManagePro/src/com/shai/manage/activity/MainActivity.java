@@ -13,7 +13,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.example.userpassmanagepro.R;
-import com.shai.manage.adapter.ActionBarItemProvider;
+import com.shai.manage.adapter.ActionBarItemAdapter;
 import com.shai.manage.db.UserLocalGroupDao;
 import com.shai.manage.db.UserLocalGroupDaoIml;
 import com.shai.manage.fragment.ContentFragment;
@@ -32,7 +32,7 @@ import com.slidingmenu.lib.app.SlidingActivity;
  */
 public class MainActivity extends SlidingActivity {
 	private ActionBar actionBar;
-	private ActionBarItemProvider adapterBarProvide;
+	private ActionBarItemAdapter adapterBarProvide;
 	private List<UserPassGroupBean> groups;
 	private OnNavigationListener mOnNavigationListener;
 	private UserLocalGroupDao dao;
@@ -55,7 +55,7 @@ public class MainActivity extends SlidingActivity {
 		titleList.add(getResources().getString(R.string.security_importance));
 		titleList.add(getResources().getString(R.string.security_top_secret));
 
-		adapterBarProvide = new ActionBarItemProvider(this, titleList);
+		adapterBarProvide = new ActionBarItemAdapter(this, titleList);
 
 		mOnNavigationListener = new OnNavigationListenerImpl(this);
 
@@ -86,7 +86,7 @@ public class MainActivity extends SlidingActivity {
 	private void initSlidingMenu() {
 		// customize the SlidingMenu
 		SlidingMenu sm = getSlidingMenu();
-		sm.setShadowWidth(150);
+		sm.setShadowWidth(120);
 		sm.setShadowDrawable(R.drawable.shadow);
 		sm.setBehindOffset(80);
 		sm.setFadeDegree(0.35f);
@@ -130,9 +130,9 @@ public class MainActivity extends SlidingActivity {
 			toggle();
 			return true;
 		case R.id.menu_actionbar_shared:
-			if (PassSetting.Debug) {
-				Util.showToast(MainActivity.this, "点击了  menu_select_group actionaBar");
-			}
+//			if (PassSetting.Debug) {
+//				Util.showToast(MainActivity.this, "点击了  menu_select_group actionaBar");
+//			}
 			// getSlidingMenu().showMenu();// show menu
 			// getSlidingMenu().showContent();//show content
 			return true;

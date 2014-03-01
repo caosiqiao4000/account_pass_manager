@@ -17,15 +17,14 @@ import android.view.ext.SatelliteMenu;
 import android.view.ext.SatelliteMenu.SateliteClickedListener;
 import android.view.ext.SatelliteMenuItem;
 import android.widget.AdapterView;
-import android.widget.ListView;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.GridView;
+import android.widget.ListView;
 
 import com.example.userpassmanagepro.R;
 import com.shai.manage.activity.PassSetting;
 import com.shai.manage.activity.other.AddUsePassActivity;
 import com.shai.manage.activity.other.PassGroupInfoActivity;
-import com.shai.manage.adapter.GridVAdapter;
+import com.shai.manage.adapter.ContentFragOneAdapter;
 import com.shai.manage.respondbean.UserPassGroupBean;
 import com.shai.manage.util.Util;
 import com.siqiao.sdk.pull_listview.ui.PullToRefreshBase.OnRefreshListener;
@@ -49,7 +48,7 @@ public class ContentFragment extends Fragment implements OnItemClickListener, On
 	private ViewPager vPager;
 	private Activity context;
 	private List<UserPassGroupBean> groups;
-	private GridVAdapter gridVAdapter;
+	private ContentFragOneAdapter gridVAdapter;
 
 	public ContentFragment(String text, int caseViewKey, List<UserPassGroupBean> groups) {
 		Log.e("Krislq", text);
@@ -89,7 +88,7 @@ public class ContentFragment extends Fragment implements OnItemClickListener, On
 
 			vPager = (ViewPager) view.findViewById(R.id.vp4_grid);
 			prlv_main_content = (PullToRefreshListView) view.findViewById(R.id.prlv_main_content);
-			gridVAdapter = new GridVAdapter(context, groups);
+			gridVAdapter = new ContentFragOneAdapter(context, groups);
 			lv_main_content = prlv_main_content.getRefreshableView();
 			lv_main_content.setAdapter(gridVAdapter);
 			lv_main_content.setOnItemClickListener(this);
@@ -97,16 +96,13 @@ public class ContentFragment extends Fragment implements OnItemClickListener, On
 			// ==========================
 			satellite_menu = (SatelliteMenu) view.findViewById(R.id.satellite_menu);
 			List<SatelliteMenuItem> items = new ArrayList<SatelliteMenuItem>();
-			items.add(new SatelliteMenuItem(4, R.drawable.ic_1));
-			items.add(new SatelliteMenuItem(4, R.drawable.ic_3));
+			items.add(new SatelliteMenuItem(1, R.drawable.ic_1));
+			items.add(new SatelliteMenuItem(3, R.drawable.ic_3));
 			items.add(new SatelliteMenuItem(4, R.drawable.ic_4));
 //			items.add(new SatelliteMenuItem(3, R.drawable.ic_5));
 //			items.add(new SatelliteMenuItem(2, R.drawable.ic_6));
-			items.add(new SatelliteMenuItem(1, R.drawable.ic_2));
+			items.add(new SatelliteMenuItem(2, R.drawable.ic_2));
 			satellite_menu.addItems(items);
-			if (PassSetting.Debug) {
-				Util.showToast(context, "ContentFragment onCreateView");
-			}
 			satellite_menu.setOnItemClickedListener(new SateliteClickedListener() {
 				public void eventOccured(int id) {
 					if (PassSetting.Debug) {
@@ -130,7 +126,7 @@ public class ContentFragment extends Fragment implements OnItemClickListener, On
 	@Override
 	public void onDestroy() {
 		if (PassSetting.Debug) {
-			Util.showToast(context, "ContentFragment onDestroy");
+//			Util.showToast(context, "ContentFragment onDestroy");
 		}
 		super.onDestroy();
 	}
@@ -138,7 +134,7 @@ public class ContentFragment extends Fragment implements OnItemClickListener, On
 	@Override
 	public void onDetach() {
 		if (PassSetting.Debug) {
-			Util.showToast(context, "ContentFragment onDetach");
+//			Util.showToast(context, "ContentFragment onDetach");
 		}
 		super.onDetach();
 	}
@@ -146,7 +142,7 @@ public class ContentFragment extends Fragment implements OnItemClickListener, On
 	@Override
 	public void onPause() {
 		if (PassSetting.Debug) {
-			Util.showToast(context, "ContentFragment onPause");
+//			Util.showToast(context, "ContentFragment onPause");
 		}
 		super.onPause();
 	}
@@ -154,7 +150,7 @@ public class ContentFragment extends Fragment implements OnItemClickListener, On
 	@Override
 	public void onResume() {
 		if (PassSetting.Debug) {
-			Util.showToast(context, "ContentFragment onResume");
+//			Util.showToast(context, "ContentFragment onResume");
 		}
 		super.onResume();
 	}
@@ -162,7 +158,7 @@ public class ContentFragment extends Fragment implements OnItemClickListener, On
 	@Override
 	public void onStart() {
 		if (PassSetting.Debug) {
-			Util.showToast(context, "ContentFragment onStart");
+//			Util.showToast(context, "ContentFragment onStart");
 		}
 		super.onStart();
 	}
@@ -170,7 +166,7 @@ public class ContentFragment extends Fragment implements OnItemClickListener, On
 	@Override
 	public void onStop() {
 		if (PassSetting.Debug) {
-			Util.showToast(context, "ContentFragment onStop");
+//			Util.showToast(context, "ContentFragment onStop");
 		}
 		super.onStop();
 	}
@@ -189,7 +185,6 @@ public class ContentFragment extends Fragment implements OnItemClickListener, On
 	@Override
 	public void onRefresh() {
 		prlv_main_content.onRefreshComplete();
-		
 	}
 
 }

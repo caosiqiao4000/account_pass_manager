@@ -22,11 +22,11 @@ public class UserPassItemBean extends BaseResult {
 	private int serverID;//
 	// 更新时间
 	private String updataTime;
+	
 	// 关联帐号
+	private String userRelevanceAccount;
 	private String userPhoneNum;
 	private String userEmail;
-	private String userRelevanceAccount;
-
 	public int getServerID() {
 		return serverID;
 	}
