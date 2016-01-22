@@ -22,5 +22,5 @@
 
     <color name="default_line_indicator_selected_color">#FF33B5E5</color>
     <color name="default_line_indicator_unselected_color">#FFBBBBBB</color>
-
+	<!-- 字体的几种颜色 -->
 </resources>

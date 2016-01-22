@@ -118,7 +118,8 @@ public abstract class PullToRefreshBase<T extends View> extends LinearLayout {
 	private boolean mIsBeingDragged = false;
 
 	private int mState = PULL_TO_REFRESH;
-	private int mMode = MODE_PULL_DOWN_TO_REFRESH;
+//	private int mMode = MODE_PULL_DOWN_TO_REFRESH;
+	private int mMode = MODE_BOTH;
 	private int mCurrentMode;
 
 	T mRefreshableView;

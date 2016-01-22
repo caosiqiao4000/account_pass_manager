@@ -16,7 +16,8 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.siqiao.sdk.common.other.util.SharedPreferencesUtil;
-import com.siqiao.sdk.common.util.DateAndStringUtil;
+import com.siqiao.sdk.common.util.UtilByPhoneHardware;
+import com.siqiao.sdk.common.util.UtilByPhoneHardware;
 import com.siqiao.sdk.customlistview.R;
 
 
@@ -86,13 +87,13 @@ public class LoadingLayout extends FrameLayout {
 		}
 		spUtil = new SharedPreferencesUtil(context, SharedPreferencesUtil.S_H_SERVICEADDRS_FLAG);
 
-		if (!DateAndStringUtil.isEmpty(tag)) {
+		if (UtilByPhoneHardware.isEmpty(tag)) {
 			String time = spUtil.getString(tag, "");
-			if (!DateAndStringUtil.isEmpty(time)) {
+			if (!UtilByPhoneHardware.isEmpty(time)) {
 				mTimeText.setText("上次更新时间:" + time);
 			} else {
-				mTimeText.setText("上次更新时间:" + DateAndStringUtil.getNowPullTime());
-				spUtil.saveString(tag, DateAndStringUtil.getNowPullTime());
+				mTimeText.setText("上次更新时间:" + UtilByPhoneHardware.getNowPullTime());
+				spUtil.saveString(tag, UtilByPhoneHardware.getNowPullTime());
 			}
 		}
 	}
@@ -101,8 +102,8 @@ public class LoadingLayout extends FrameLayout {
 		mHeaderText.setText(mPullLabel);
 		mHeaderImage.setVisibility(View.VISIBLE);
 		mHeaderProgress.setVisibility(View.GONE);
-		if (!DateAndStringUtil.isEmpty(tag)) {
-			spUtil.saveString(tag, DateAndStringUtil.getNowPullTime());
+		if (!UtilByPhoneHardware.isEmpty(tag)) {
+			spUtil.saveString(tag, UtilByPhoneHardware.getNowPullTime());
 		}
 	}
 
@@ -121,15 +122,15 @@ public class LoadingLayout extends FrameLayout {
 		mHeaderImage.clearAnimation();
 		mHeaderImage.setVisibility(View.GONE);
 		mHeaderProgress.setVisibility(View.VISIBLE);
-		if (!DateAndStringUtil.isEmpty(tag)) {
+		if (!UtilByPhoneHardware.isEmpty(tag)) {
 			String time = spUtil.getString(tag, "");
-			if (!DateAndStringUtil.isEmpty(time)) {
+			if (!UtilByPhoneHardware.isEmpty(time)) {
 				mTimeText.setText("上次更新时间:" + time);
 			} else {
-				mTimeText.setText("上次更新时间:" + DateAndStringUtil.getNowPullTime());
+				mTimeText.setText("上次更新时间:" + UtilByPhoneHardware.getNowPullTime());
 			}
 		}
-		spUtil.saveString(tag, DateAndStringUtil.getNowPullTime());
+		spUtil.saveString(tag, UtilByPhoneHardware.getNowPullTime());
 	}
 
 	public void setRefreshingLabel(String refreshingLabel) {

@@ -1,5 +1,7 @@
 package com.siqiao.sdk.dialog.ui;
 
+import com.siqiao.sdk.dialog.R;
+
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -10,14 +12,27 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.siqiao.sdk.dialog.R;
-
 /**
  * 
  * Create custom Dialog windows for your application Custom dialogs rely on custom layouts wich allow you to create and use your own look & feel.
  * 
  * Under GPL v3 : http://www.gnu.org/licenses/gpl-3.0.html
- * 
+ * demo
+ * builder = new CustomDialog.Builder(setCreateContext());
+            String a = "";
+            if (null != args) {
+                a = args.getString(KEY_STRING);
+            }
+            builder.setTitle("修改备注");
+            dialogView = LayoutInflater.from(setCreateContext()).inflate(
+                    R.layout.dialog_editview, null);
+            et_dialog = (EditText) dialogView.findViewById(R.id.et_dialog);
+            et_dialog.setText(null == a ? "" : a);
+            Util.setEditCursorToTextEnd(et_dialog);
+            builder.setContentView(dialogView);
+            builder.setPositiveButton(R.string.submit,setDialogClickListener());
+            builder.setNegativeButton(R.string.cancel, null);
+            return builder.create();
  * @author antoine vianey
  *  这个对话框有按钮
  */

@@ -2,12 +2,15 @@
 <resources>
 
     <!-- 窗口底部布局栏颜色 -->
-    <color name="window_bottom_layout">#46464D</color>
-    <color name="black">#000000</color>
+    <color name="window_bottom_layout_46464D">#46464D</color>
+    <color name="black_000000">#000000</color>
+    <color name="image_bg_color">#ffaaaaaa</color>
     <color name="white">#FFFFFF</color>
     <color name="red">#FF0000</color>
     <color name="green">#00FF00</color>
     <color name="blue">#006699</color>
+    <color name="grey">#ff58616d</color>
+ <!-- 灰色 -->
     <color name="title_bg">#333333</color>
     <!-- 白色 带灰 作布局背景  QQ背景 -->
     <color name="white_gray_qq">#DDDDDD</color>
